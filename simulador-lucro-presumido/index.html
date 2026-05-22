@@ -1,0 +1,1693 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simulador Profissional Lucro Presumido 2026 | TAX ACCOUNTING</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    /* ════════════════════════════════════════════════════════════
+       IDENTIDADE VISUAL — TAX ACCOUNTING
+       Cores oficiais conforme Manual de Marca
+       Tipografia: Blauer Neue (substituída por Manrope — equivalente
+       geométrica e clean disponível no Google Fonts)
+       ════════════════════════════════════════════════════════════ */
+    :root{
+      /* Paleta institucional de azuis (Manual de Marca) */
+      --tax-blue:#1C3AF5;        /* HEX 1c3af5 — Cor institucional principal */
+      --tax-blue-2:#1730C7;      /* HEX 1730c7 — Azul escuro 1 */
+      --tax-blue-3:#122599;      /* HEX 122599 — Azul escuro 2 */
+      --tax-blue-4:#0D1A6B;      /* HEX 0d1a6b — Azul muito escuro */
+      --tax-blue-5:#070F3D;      /* HEX 070f3d — Azul quase preto */
+      --tax-blue-light:#4D66F7;  /* Derivado — para hovers e destaques */
+      --tax-blue-50:#EEF1FF;     /* Derivado — fundos sutis */
+      --tax-blue-100:#E0E6FF;    /* Derivado — banners informativos */
+
+      /* Aliases semânticos */
+      --primary:var(--tax-blue);
+      --primary-dk:var(--tax-blue-3);
+      --primary-darker:var(--tax-blue-4);
+      --primary-lt:var(--tax-blue-light);
+      --accent:var(--tax-blue);
+      --accent-dk:var(--tax-blue-3);
+      --accent-lt:var(--tax-blue-light);
+
+      /* Cores funcionais (mantidas neutras para legibilidade) */
+      --success:#0E8C4D; --success-lt:#16A862;
+      --danger:#C13B38; --danger-lt:#DC5856;
+      --warning:#C97B1B; --info:var(--tax-blue);
+
+      /* Neutros */
+      --gray-900:#0F172A; --gray-700:#334155; --gray-500:#64748B;
+      --gray-300:#CBD5E1; --gray-100:#E7ECF3; --gray-50:#F5F7FB;
+      --white:#FFFFFF; --bg:#F8FAFD;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Manrope','Blauer Neue','Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--gray-900);line-height:1.55;min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased;font-feature-settings:'ss01','cv01'}
+
+    /* HEADER */
+    header{background:linear-gradient(135deg,var(--tax-blue-4) 0%,var(--tax-blue-3) 50%,var(--tax-blue) 100%);color:var(--white);padding:26px 0;border-bottom:none;position:relative;overflow:hidden}
+    header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent 0%,var(--tax-blue-light) 50%,transparent 100%)}
+    .container{max-width:1140px;margin:0 auto;padding:0 24px;width:100%}
+    .header-in{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;position:relative;z-index:1}
+    .brand{display:flex;align-items:center;gap:14px}
+    /* LOGOMARCA OFICIAL — Logotipo Reduzido "TAXACT" sobre fundo branco
+       Conforme Manual de Marca Tax Accounting:
+       • Logotipo reduzido recomendado para espaços restritos
+       • Aplicação em fundo branco (uso aconselhável)
+       • Área de proteção ≈ 1x o símbolo "e" preservada via padding */
+    .brand-logo{display:inline-block;flex-shrink:0;width:170px;height:40px;background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAqgAAACzCAYAAABFNu4tAAAlXUlEQVR4nO3d+3XbxvM28Ge/J/8HbwVhKghcQagKQlUQqoLIFdiuQHIFYiowU4HoCgRXYKQC41fBvH/s0IQVXUjsbRZ8Puf42HEMYEjhMtjLLEBEREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREZbhj/6GILAHcpwvlPy6cc7uMxyMiIiIqRkRaAM2Jmw3OuS56MIX9VDoAIiIiIgIA3ABYnrjNDsBF9EgK+1/pAIiIiIiIxpigEhEREZEpTFCJiIiIyBQmqERERERkChNUIiIiIjKFCSoRERERmcIElYiIiIhMYYJKRERERKYwQSUiIiIiU5igEhEREZEpTFCJiIiIyBQmqERERERkChNUIiIiIjKFCSoRERERmcIElYiIiIhMYYJKRERERKYwQSUiIiIiU5igEhEREZEpTFCJiIiIyBQmqERERERkChNUIiIiIjKFCSoRERERmcIElYiIiIhMYYJKRERERKYwQSUiIiIiU5igEhEREZEpTFCJiIiIyBQmqERERERkChNUIiIiIjKFCSoRERERmcIElYiIiIhMYYJKRERERKYwQSUiIiIiU5igEhEREZEpTFCJiIiIyBQmqERERERkChNUIiIiIjKFCSoRERERmfJT6QCIiCgPEWkBNPqfDYD2xF10AAb98+Cc64KDomJEpMHhHBj/+RQ7/Z3nA0VlOUG9EZGhdBDP+Ns5tykdRGyPHl5TVXOTenRztqJzzg2lgyhNRJalYxjpnXN96SCOMTqnWwC/6O/7v0txvP0fO/jE9bP+3oHnsgnPnBML/RXDu9Gx9n/cwZ8HX+DPhb6W5wLZYTlBbUsH8ILPpQM4xaMbVAPgN/19gXg3qfHx9n/sR7/+hb9pmXloOecGEfkLwKp0LCMdgDelgyhJRK4B3JSOQ3UALkoH8RxN5Jfw1/QS4S+YU7X6+3L8lyLSw3+HXwDsnHO7jDGdJRFZwP8cftffFwXCWOrvq/1f6HNhB//87ODPhyFrVFQVd+w/1BvhfbpQqvLBOfe+dBDPefTQalHmBvWSHv4G9RnAtmTrlCbv97D1QrRxzl2VDqIEEVkDuCsdhxoAXFhq+dHkYwWffKxKxhJgCwPX/pyIyArAHyiX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') no-repeat center;background-size:contain;border-radius:0;box-shadow:none}
+    .brand-logo.foot{width:180px;height:50px;background-size:contain;box-shadow:none}
+    .brand-divider{width:1px;align-self:stretch;background:rgba(255,255,255,.22);margin:4px 4px}
+    .brand-txt h1{font-size:1.05rem;font-weight:700;letter-spacing:-.005em;line-height:1.2;color:var(--white)}
+    .brand-txt h1 strong{font-weight:800}
+    .brand-txt p{font-size:.7rem;color:rgba(255,255,255,.72);font-weight:500;letter-spacing:.12em;text-transform:uppercase;margin-top:4px}
+    .header-badge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:9px 18px;border-radius:30px;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--white);backdrop-filter:blur(8px)}
+
+    /* MAIN */
+    main{flex:1;padding:36px 0 60px}
+    .intro{text-align:center;margin-bottom:24px}
+    .intro h2{font-size:clamp(1.5rem,2.6vw,2rem);font-weight:800;color:var(--tax-blue-4);margin-bottom:10px;letter-spacing:-.02em;line-height:1.15}
+    .intro h2 span{color:var(--tax-blue)}
+    .intro p{font-size:.95rem;color:var(--gray-700);max-width:760px;margin:0 auto;font-weight:500}
+
+    /* DASHBOARD APURAÇÕES */
+    .dashboard{background:var(--white);border-radius:16px;padding:24px 28px;margin-bottom:24px;box-shadow:0 4px 24px rgba(7,15,61,.06);border:1px solid var(--gray-100)}
+    .dash-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;flex-wrap:wrap;gap:12px}
+    .dash-head h3{font-size:1rem;font-weight:800;color:var(--tax-blue-4);display:flex;align-items:center;gap:10px;letter-spacing:-.01em}
+    .dash-head h3 .ico{width:28px;height:28px;background:var(--tax-blue);color:var(--white);border-radius:7px;display:inline-flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:800}
+    .dash-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .dash-card{background:var(--white);border:1.5px solid var(--gray-100);border-radius:14px;padding:16px 16px 14px;position:relative;transition:all .25s;display:flex;flex-direction:column;min-height:210px}
+    .dash-card.empty{border-style:dashed;border-color:var(--gray-300);background:var(--gray-50)}
+    .dash-card.saved{border-color:var(--tax-blue);background:linear-gradient(180deg,var(--tax-blue-50) 0%,var(--white) 60%);box-shadow:0 4px 16px rgba(28,58,245,.08)}
+    .dash-card.saved.lc{border-color:var(--tax-blue-3);background:linear-gradient(180deg,#DDE3FF 0%,var(--white) 60%)}
+    .dash-card-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+    .dash-card-head .t-num{font-size:1.05rem;font-weight:800;color:var(--tax-blue-4);letter-spacing:-.01em}
+    .dash-card-head .t-num span{font-size:.68rem;font-weight:600;color:var(--gray-500);letter-spacing:.08em;text-transform:uppercase;display:block;margin-top:2px}
+    .dash-status{font-size:.6rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:20px;background:var(--gray-100);color:var(--gray-500)}
+    .dash-status.ok{background:#DCFCE7;color:var(--success)}
+    .dash-status.lc{background:var(--tax-blue);color:var(--white)}
+    .dash-data{flex:1;font-size:.72rem;color:var(--gray-700);line-height:1.55}
+    .dash-data .r{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px dashed var(--gray-100)}
+    .dash-data .r:last-child{border-bottom:none}
+    .dash-data .r .v{font-weight:700;color:var(--tax-blue-4);font-variant-numeric:tabular-nums}
+    .dash-data .empty-txt{color:var(--gray-500);font-style:italic;text-align:center;padding:24px 0;font-size:.78rem}
+    .dash-actions{display:flex;gap:5px;margin-top:12px}
+    .dash-btn{flex:1;padding:8px 6px;font-size:.68rem;font-weight:800;border:none;border-radius:7px;cursor:pointer;transition:all .15s;letter-spacing:.06em;text-transform:uppercase}
+    .dash-btn.primary{background:var(--tax-blue);color:var(--white)}
+    .dash-btn.primary:hover{background:var(--tax-blue-3)}
+    .dash-btn.accent{background:var(--tax-blue-4);color:var(--white)}
+    .dash-btn.accent:hover{background:var(--tax-blue-5)}
+    .dash-btn.ghost{background:var(--gray-100);color:var(--gray-700)}
+    .dash-btn.ghost:hover{background:var(--gray-300);color:var(--tax-blue-4)}
+    .dash-btn.danger{background:#FDE7E5;color:var(--danger)}
+    .dash-btn.danger:hover{background:var(--danger);color:var(--white)}
+    .dash-foot{display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding-top:16px;border-top:1px solid var(--gray-100);flex-wrap:wrap;gap:10px}
+    .dash-foot-info{font-size:.74rem;color:var(--gray-500)}
+    .dash-foot-info strong{color:var(--tax-blue-4);font-weight:800}
+
+    /* PROGRESS BAR */
+    .progress-wrap{background:var(--white);border-radius:16px;padding:24px 28px;margin-bottom:24px;box-shadow:0 4px 24px rgba(7,15,61,.06);border:1px solid var(--gray-100)}
+    .progress-steps{display:flex;justify-content:space-between;align-items:center;position:relative}
+    .progress-steps::before{content:'';position:absolute;top:18px;left:18px;right:18px;height:2px;background:var(--gray-300);z-index:0}
+    .progress-fill{position:absolute;top:18px;left:18px;height:2px;background:var(--tax-blue);z-index:1;transition:width .35s ease;width:0}
+    .step-dot{position:relative;z-index:2;width:36px;height:36px;background:var(--white);border:2px solid var(--gray-300);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;color:var(--gray-500);transition:all .3s}
+    .step-dot.active{background:var(--tax-blue);border-color:var(--tax-blue);color:var(--white);box-shadow:0 4px 14px rgba(28,58,245,.4)}
+    .step-dot.done{background:var(--tax-blue-4);border-color:var(--tax-blue-4);color:var(--white)}
+    .step-label{position:absolute;top:46px;left:50%;transform:translateX(-50%);font-size:.7rem;font-weight:700;color:var(--gray-500);text-align:center;white-space:nowrap;letter-spacing:.04em;text-transform:uppercase}
+    .step-dot.active + .step-label, .step-dot.done + .step-label{color:var(--tax-blue-4)}
+    .step-wrap{position:relative;display:flex;flex-direction:column;align-items:center;padding-bottom:24px}
+
+    /* CARDS / FORM */
+    .card{background:var(--white);border-radius:18px;box-shadow:0 8px 32px rgba(7,15,61,.08);border:1px solid var(--gray-100);overflow:hidden;animation:slideIn .4s ease}
+    @keyframes slideIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    .card-head{padding:28px 32px 20px;border-bottom:1px solid var(--gray-100);background:linear-gradient(180deg,var(--tax-blue-50) 0%,var(--white) 100%);position:relative}
+    .card-head::before{content:'';position:absolute;left:32px;top:0;width:48px;height:3px;background:var(--tax-blue);border-radius:0 0 3px 3px}
+    .card-head .step-tag{display:inline-block;background:var(--tax-blue);color:var(--white);font-size:.65rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:5px 12px;border-radius:30px;margin-bottom:10px}
+    .card-head h3{font-size:1.3rem;font-weight:800;color:var(--tax-blue-4);margin-bottom:8px;letter-spacing:-.015em}
+    .card-head p{font-size:.88rem;color:var(--gray-700);font-weight:500}
+    .card-body{padding:28px 32px}
+    .card-foot{padding:18px 32px;background:var(--gray-50);border-top:1px solid var(--gray-100);display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+
+    /* INPUTS */
+    .field{margin-bottom:18px}
+    .field-label{display:block;font-size:.82rem;font-weight:700;color:var(--tax-blue-4);margin-bottom:7px;letter-spacing:-.005em}
+    .field-label .req{color:var(--danger);margin-left:3px}
+    .field-help{font-size:.75rem;color:var(--gray-500);margin-top:5px;line-height:1.5;font-weight:500}
+    .input,.select{width:100%;padding:12px 14px;font-size:.92rem;font-family:inherit;font-weight:500;border:1.5px solid var(--gray-300);border-radius:9px;background:var(--white);color:var(--gray-900);transition:all .2s}
+    .input:focus,.select:focus{outline:none;border-color:var(--tax-blue);box-shadow:0 0 0 4px rgba(28,58,245,.12)}
+    .input-money{position:relative}
+    .input-money::before{content:'R$';position:absolute;left:14px;top:50%;transform:translateY(-50%);font-weight:700;color:var(--tax-blue);font-size:.85rem;z-index:1;pointer-events:none}
+    .input-money .input{padding-left:42px}
+    .auto-tag{display:inline-flex;align-items:center;gap:4px;background:var(--tax-blue-100);color:var(--tax-blue-3);font-size:.66rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:20px;margin-left:8px;vertical-align:middle}
+
+    /* BUTTONS */
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 26px;font-family:inherit;font-size:.88rem;font-weight:700;border-radius:9px;cursor:pointer;border:none;transition:all .2s;letter-spacing:-.005em;text-decoration:none}
+    .btn-primary{background:var(--tax-blue);color:var(--white)}
+    .btn-primary:hover{background:var(--tax-blue-3);transform:translateY(-1px);box-shadow:0 10px 24px rgba(28,58,245,.3)}
+    .btn-accent{background:var(--tax-blue-4);color:var(--white)}
+    .btn-accent:hover{background:var(--tax-blue-5);transform:translateY(-1px);box-shadow:0 10px 24px rgba(13,26,107,.4)}
+    .btn-ghost{background:transparent;color:var(--gray-700);border:1.5px solid var(--gray-300)}
+    .btn-ghost:hover{background:var(--tax-blue-50);border-color:var(--tax-blue);color:var(--tax-blue)}
+    .btn-success{background:var(--success);color:var(--white)}
+    .btn-success:hover{background:#0A6E3D;transform:translateY(-1px);box-shadow:0 10px 24px rgba(14,140,77,.3)}
+    .btn:disabled{opacity:.45;cursor:not-allowed;transform:none!important;box-shadow:none!important}
+    .btn-sm{padding:8px 16px;font-size:.78rem}
+
+    /* TRIMESTER GRID */
+    .grid-options{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-top:6px}
+    .opt-card{background:var(--white);border:2px solid var(--gray-300);border-radius:12px;padding:20px 14px;text-align:center;cursor:pointer;transition:all .2s;font-weight:600;position:relative}
+    .opt-card:hover{border-color:var(--tax-blue);background:var(--tax-blue-50)}
+    .opt-card.selected{border-color:var(--tax-blue);background:linear-gradient(135deg,var(--tax-blue-50) 0%,var(--tax-blue-100) 100%);box-shadow:0 6px 18px rgba(28,58,245,.18)}
+    .opt-card.has-saved::after{content:'✓';position:absolute;top:8px;right:8px;width:20px;height:20px;background:var(--success);color:var(--white);border-radius:50%;font-size:.72rem;font-weight:900;display:flex;align-items:center;justify-content:center}
+    .opt-card .lbl{font-size:1.15rem;font-weight:800;color:var(--tax-blue-4);display:block;margin-bottom:5px;letter-spacing:-.015em}
+    .opt-card .sub-lbl{font-size:.7rem;color:var(--gray-500);font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+    .opt-card.selected .lbl{color:var(--tax-blue)}
+
+    /* ACTIVITY ROWS */
+    .activity-list{display:flex;flex-direction:column;gap:10px;margin-bottom:14px}
+    .activity-row{background:var(--tax-blue-50);border:1px solid var(--tax-blue-100);border-radius:12px;padding:14px;display:grid;grid-template-columns:1fr 180px 38px;gap:10px;align-items:end}
+    .activity-row .field{margin-bottom:0}
+    .btn-remove{width:38px;height:38px;background:var(--white);color:var(--danger);border:1.5px solid var(--gray-100);border-radius:8px;cursor:pointer;font-size:1.1rem;font-weight:700;display:flex;align-items:center;justify-content:center;transition:all .2s}
+    .btn-remove:hover{background:var(--danger);color:var(--white);border-color:var(--danger)}
+    .btn-add{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:var(--white);color:var(--tax-blue);border:1.5px dashed var(--tax-blue);border-radius:9px;font-weight:700;font-size:.82rem;cursor:pointer;transition:all .2s}
+    .btn-add:hover{background:var(--tax-blue);color:var(--white)}
+
+    /* INFO BANNERS */
+    .info-banner{background:linear-gradient(135deg,var(--tax-blue-50) 0%,var(--tax-blue-100) 100%);border-left:4px solid var(--tax-blue);padding:14px 18px;border-radius:10px;margin-bottom:18px;font-size:.85rem;color:var(--tax-blue-4);font-weight:500}
+    .info-banner strong{font-weight:800;color:var(--tax-blue-3)}
+    .warn-banner{background:linear-gradient(135deg,#FFF8E1 0%,#FFF1C2 100%);border-left:4px solid var(--warning);padding:14px 18px;border-radius:10px;margin-bottom:18px;font-size:.85rem;color:#7B5A0E;font-weight:500}
+    .warn-banner strong{font-weight:800}
+    .success-banner{background:linear-gradient(135deg,#E7F8EE 0%,#CFF1DC 100%);border-left:4px solid var(--success);padding:14px 18px;border-radius:10px;margin-bottom:18px;font-size:.85rem;color:#0A5C32;font-weight:500}
+    .saved-data-banner{background:linear-gradient(135deg,var(--tax-blue-50) 0%,var(--tax-blue-100) 100%);border-left:4px solid var(--tax-blue);padding:13px 16px;border-radius:10px;margin-bottom:16px;font-size:.83rem;color:var(--tax-blue-4);display:flex;align-items:center;gap:12px;font-weight:500}
+    .saved-data-banner .ic{width:26px;height:26px;background:var(--tax-blue);color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.85rem;flex-shrink:0}
+    .saved-data-banner strong{font-weight:800;color:var(--tax-blue-3)}
+
+    /* RESULT */
+    .result-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:24px}
+    .result-card{background:var(--white);border:1.5px solid var(--gray-100);border-radius:14px;padding:24px;text-align:center;position:relative;overflow:hidden;transition:all .2s}
+    .result-card:hover{box-shadow:0 8px 24px rgba(7,15,61,.08)}
+    .result-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--tax-blue)}
+    .result-card.irpj::before{background:var(--tax-blue-4)}
+    .result-card .lbl{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-500);margin-bottom:10px}
+    .result-card .val{font-size:1.95rem;font-weight:800;color:var(--tax-blue-4);letter-spacing:-.03em;line-height:1.1;font-variant-numeric:tabular-nums}
+    .result-card .val .moeda{font-size:.9rem;color:var(--tax-blue);margin-right:4px;font-weight:700}
+    .result-total{background:linear-gradient(135deg,var(--tax-blue-4) 0%,var(--tax-blue-3) 50%,var(--tax-blue) 100%);color:var(--white);border-radius:14px;padding:26px 28px;text-align:center;margin-bottom:28px;box-shadow:0 16px 40px rgba(13,26,107,.35);position:relative;overflow:hidden}
+    .result-total::after{content:'';position:absolute;top:-50%;right:-20%;width:300px;height:300px;background:radial-gradient(circle,rgba(255,255,255,.08) 0%,transparent 70%);border-radius:50%}
+    .result-total::before{display:none}
+    .result-total .lbl{color:rgba(255,255,255,.8);position:relative;z-index:1}
+    .result-total .val{color:var(--white);font-size:2.5rem;position:relative;z-index:1;letter-spacing:-.03em;font-weight:800}
+    .result-total .val .moeda{color:rgba(255,255,255,.6);font-weight:600}
+
+    /* RESTITUTION ALERT (Q4) */
+    .restitution-alert{background:linear-gradient(135deg,var(--success) 0%,#16A862 100%);color:var(--white);border-radius:16px;padding:26px 30px;margin-bottom:28px;box-shadow:0 16px 40px rgba(14,140,77,.35);border:2px solid var(--success-lt);position:relative;overflow:hidden}
+    .restitution-alert::before{content:'';position:absolute;top:-30px;right:-30px;width:160px;height:160px;background:rgba(255,255,255,.08);border-radius:50%}
+    .restitution-alert .ra-tag{display:inline-block;background:rgba(255,255,255,.18);color:#FFFFFF;font-size:.66rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase;padding:5px 14px;border-radius:30px;margin-bottom:10px;border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(8px)}
+    .restitution-alert h4{font-size:1.2rem;font-weight:800;margin-bottom:10px;letter-spacing:-.015em;position:relative;z-index:1}
+    .restitution-alert p{font-size:.88rem;line-height:1.65;color:rgba(255,255,255,.95);margin-bottom:10px;position:relative;z-index:1;font-weight:500}
+    .restitution-alert .ra-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px;position:relative;z-index:1}
+    .restitution-alert .ra-cell{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:16px;backdrop-filter:blur(8px)}
+    .restitution-alert .ra-cell .lbl{font-size:.66rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.8);margin-bottom:6px}
+    .restitution-alert .ra-cell .val{font-size:1.4rem;font-weight:800;color:var(--white);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+    .restitution-alert .ra-foot{font-size:.8rem;color:rgba(255,255,255,.85);margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.2);position:relative;z-index:1;line-height:1.65}
+
+    /* BREAKDOWN TABLE */
+    .breakdown{margin-bottom:24px}
+    .breakdown h4{font-size:1.05rem;font-weight:800;color:var(--tax-blue-4);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--tax-blue);display:inline-block;letter-spacing:-.015em}
+    .b-table{width:100%;border-collapse:collapse;background:var(--white);border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(7,15,61,.05);border:1px solid var(--gray-100)}
+    .b-table th{background:var(--tax-blue-50);text-align:left;padding:12px 14px;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--tax-blue-3);border-bottom:1px solid var(--gray-100)}
+    .b-table td{padding:11px 14px;font-size:.86rem;color:var(--gray-900);border-bottom:1px solid var(--gray-100);font-weight:500}
+    .b-table tr:last-child td{border-bottom:none}
+    .b-table .num{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+    .b-table .total-row td{background:linear-gradient(90deg,var(--tax-blue-50) 0%,var(--tax-blue-100) 100%);font-weight:800;color:var(--tax-blue-4)}
+    .b-table .high-row td{background:var(--tax-blue-50);font-weight:700;color:var(--tax-blue-3)}
+    .b-table .credit-row td{background:#E7F8EE;font-weight:700;color:#0A5C32}
+
+    /* EXPLANATION */
+    .explanation{background:var(--white);border:1px solid var(--gray-100);border-radius:14px;padding:26px 28px;margin-bottom:20px}
+    .explanation h4{font-size:1.02rem;font-weight:800;color:var(--tax-blue-4);margin-bottom:14px;display:flex;align-items:center;gap:10px;letter-spacing:-.015em}
+    .explanation h4 .icn{width:26px;height:26px;background:var(--tax-blue);color:var(--white);border-radius:7px;display:inline-flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:800}
+    .explanation p{font-size:.88rem;color:var(--gray-700);margin-bottom:10px;line-height:1.7;font-weight:500}
+    .explanation .calc-line{font-family:'JetBrains Mono','SF Mono','Consolas','Monaco',monospace;background:var(--tax-blue-50);padding:11px 14px;border-radius:8px;font-size:.82rem;color:var(--tax-blue-4);border-left:3px solid var(--tax-blue);margin:8px 0;display:block;font-weight:600}
+    .explanation ul{padding-left:18px;margin:8px 0}
+    .explanation li{font-size:.86rem;color:var(--gray-700);margin-bottom:6px;font-weight:500}
+    .explanation li strong{color:var(--tax-blue-4);font-weight:800}
+    .lc224-active{background:linear-gradient(135deg,var(--tax-blue-50) 0%,var(--tax-blue-100) 100%);border:1.5px solid var(--tax-blue);border-left-width:5px}
+    .lc224-inactive{background:linear-gradient(135deg,#E7F8EE 0%,#CFF1DC 100%);border:1.5px solid var(--success-lt);border-left-width:5px}
+    .lc224-tag{display:inline-block;background:var(--tax-blue);color:var(--white);font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:30px;margin-bottom:12px}
+    .lc224-tag.off{background:var(--success);color:var(--white)}
+
+    /* FOOTER */
+    footer{background:linear-gradient(180deg,var(--tax-blue-4) 0%,var(--tax-blue-5) 100%);color:var(--white);padding:32px 0;border-top:none;position:relative}
+    footer::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent 0%,var(--tax-blue-light) 50%,transparent 100%)}
+    .foot-in{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    .foot-brand{display:flex;align-items:center;gap:14px}
+    .foot-brand .brand-mark{background:var(--white);color:var(--tax-blue);box-shadow:0 4px 14px rgba(7,15,61,.4)}
+    .foot-txt h5{font-size:.88rem;font-weight:800;letter-spacing:-.005em;color:var(--white)}
+    .foot-txt p{font-size:.7rem;color:rgba(255,255,255,.6);font-weight:500;letter-spacing:.12em;text-transform:uppercase;margin-top:4px}
+    .foot-meta{font-size:.72rem;color:rgba(255,255,255,.55);font-weight:500;text-align:right;line-height:1.65}
+
+    /* RESPONSIVE */
+    @media (max-width:900px){
+      .dash-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:768px){
+      .activity-row{grid-template-columns:1fr;gap:8px}
+      .result-grid{grid-template-columns:1fr}
+      .step-label{font-size:.6rem}
+      .card-head,.card-body,.card-foot{padding-left:20px;padding-right:20px}
+      .header-in{flex-direction:column;align-items:flex-start;gap:14px}
+      .foot-in{flex-direction:column;text-align:center}
+      .foot-meta{text-align:center}
+      .result-total .val{font-size:1.8rem}
+      .restitution-alert .ra-grid{grid-template-columns:1fr}
+      .dash-grid{grid-template-columns:1fr}
+    }
+
+    .hidden{display:none!important}
+    .small-note{font-size:.72rem;color:var(--gray-500);font-style:italic;margin-top:6px}
+    .row-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    @media (max-width:600px){.row-2{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container header-in">
+      <div class="brand">
+        <div class="brand-logo" role="img" aria-label="Tax Accounting"></div>
+        <div class="brand-divider"></div>
+        <div class="brand-txt">
+          <h1>Simulador Lucro Presumido 2026</h1>
+          <p>IRPJ · CSLL · Adicional LC 224/25</p>
+        </div>
+      </div>
+      <div class="header-badge">Ano-Calendário 2026</div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <div class="intro">
+        <h2>Apuração de <span>IRPJ e CSLL</span> no Regime do Lucro Presumido</h2>
+        <p>Simulador trimestral conforme Lei 9.430/96, Lei 9.249/95, LC 224/25 e Instruções Normativas RFB 2.305 e 2.306/2026. Salve cada trimestre e reutilize os dados nos cálculos subsequentes.</p>
+      </div>
+
+      <!-- DASHBOARD DAS APURAÇÕES SALVAS -->
+      <div class="dashboard" id="dashboard">
+        <div class="dash-head">
+          <h3><span class="ico">★</span> Apurações Salvas — Ano-Calendário 2026</h3>
+          <div style="display:flex;gap:8px">
+            <button class="btn btn-ghost btn-sm" id="btnExportar">Exportar em Excel</button>
+            <button class="btn btn-ghost btn-sm" id="btnLimparTudo" style="color:var(--danger);border-color:#FAD1CF">✕ Limpar Tudo</button>
+          </div>
+        </div>
+        <div class="dash-grid" id="dashGrid"></div>
+        <div class="dash-foot">
+          <div class="dash-foot-info" id="dashFootInfo">Inicie pelo 1º trimestre ou escolha qualquer trimestre. As apurações salvas serão usadas automaticamente nos cálculos seguintes.</div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <button class="btn btn-accent btn-sm" id="btnNovaApuracao">＋ Nova Apuração</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROGRESS -->
+      <div class="progress-wrap hidden" id="progressWrap">
+        <div class="progress-steps" id="progressSteps">
+          <div class="progress-fill" id="progressFill"></div>
+          <div class="step-wrap"><div class="step-dot active" data-s="1">1</div><div class="step-label">Trimestre</div></div>
+          <div class="step-wrap"><div class="step-dot" data-s="2">2</div><div class="step-label">Atividades</div></div>
+          <div class="step-wrap"><div class="step-dot" data-s="3">3</div><div class="step-label">Receitas</div></div>
+          <div class="step-wrap"><div class="step-dot" data-s="4">4</div><div class="step-label">Outras Receitas</div></div>
+          <div class="step-wrap"><div class="step-dot" data-s="5">5</div><div class="step-label">LC 224/25</div></div>
+          <div class="step-wrap"><div class="step-dot" data-s="6">6</div><div class="step-label">Resultado</div></div>
+        </div>
+      </div>
+
+      <!-- STEP 1: TRIMESTRE -->
+      <div class="card hidden" id="step1">
+        <div class="card-head">
+          <span class="step-tag">Etapa 1 de 6</span>
+          <h3>Qual é o trimestre da apuração?</h3>
+          <p>O Lucro Presumido tem apuração trimestral (Lei 9.430/96, art. 25). Selecione o trimestre do ano-calendário 2026 que deseja calcular. Trimestres já salvos aparecem marcados com ✓.</p>
+        </div>
+        <div class="card-body">
+          <div class="field">
+            <label class="field-label">Trimestre de Apuração <span class="req">*</span></label>
+            <div class="grid-options" id="trimestreGrid">
+              <div class="opt-card" data-val="1"><span class="lbl">1º Trim</span><span class="sub-lbl">Jan · Fev · Mar</span></div>
+              <div class="opt-card" data-val="2"><span class="lbl">2º Trim</span><span class="sub-lbl">Abr · Mai · Jun</span></div>
+              <div class="opt-card" data-val="3"><span class="lbl">3º Trim</span><span class="sub-lbl">Jul · Ago · Set</span></div>
+              <div class="opt-card" data-val="4"><span class="lbl">4º Trim</span><span class="sub-lbl">Out · Nov · Dez</span></div>
+            </div>
+          </div>
+          <div class="field">
+            <label class="field-label">Razão Social ou Identificação da Empresa <span class="small-note">(opcional)</span></label>
+            <input type="text" class="input" id="razaoSocial" placeholder="Ex.: Empresa Exemplo Ltda" />
+          </div>
+          <div id="reentryBannerArea"></div>
+        </div>
+        <div class="card-foot">
+          <button class="btn btn-ghost" id="btnVoltarDash">← Painel</button>
+          <button class="btn btn-primary" id="btnNext1">Continuar →</button>
+        </div>
+      </div>
+
+      <!-- STEP 2: ATIVIDADES -->
+      <div class="card hidden" id="step2">
+        <div class="card-head">
+          <span class="step-tag">Etapa 2 de 6</span>
+          <h3>Quais são as atividades exercidas pela empresa?</h3>
+          <p>Conforme art. 15 da Lei 9.249/95, o percentual de presunção varia conforme a natureza da atividade. Em caso de atividades diversificadas (§ 2º), aplica-se o percentual de cada atividade.</p>
+        </div>
+        <div class="card-body">
+          <div class="info-banner">
+            <strong>Atenção:</strong> Você pode adicionar mais de uma atividade. Para cada atividade, será solicitada a receita bruta correspondente na próxima etapa.
+          </div>
+          <div class="activity-list" id="activityList"></div>
+          <button class="btn-add" id="btnAddActivity">＋ Adicionar outra atividade</button>
+        </div>
+        <div class="card-foot">
+          <button class="btn btn-ghost" data-back="1">← Voltar</button>
+          <button class="btn btn-primary" id="btnNext2">Continuar →</button>
+        </div>
+      </div>
+
+      <!-- STEP 3: RECEITAS -->
+      <div class="card hidden" id="step3">
+        <div class="card-head">
+          <span class="step-tag">Etapa 3 de 6</span>
+          <h3>Informe a Receita Bruta de cada atividade no trimestre</h3>
+          <p>Conforme art. 12 do DL 1.598/77, deduzida das devoluções, vendas canceladas e descontos incondicionais concedidos.</p>
+        </div>
+        <div class="card-body">
+          <div id="receitasContainer"></div>
+        </div>
+        <div class="card-foot">
+          <button class="btn btn-ghost" data-back="2">← Voltar</button>
+          <button class="btn btn-primary" id="btnNext3">Continuar →</button>
+        </div>
+      </div>
+
+      <!-- STEP 4: OUTRAS RECEITAS -->
+      <div class="card hidden" id="step4">
+        <div class="card-head">
+          <span class="step-tag">Etapa 4 de 6</span>
+          <h3>Outras Receitas e Ganhos do Trimestre</h3>
+          <p>Conforme art. 25, II da Lei 9.430/96, integram a base os ganhos de capital, rendimentos de aplicações financeiras e demais receitas não abrangidas pela receita bruta operacional. Esses valores são adicionados <strong>integralmente</strong> à base, sem aplicação do percentual de presunção.</p>
+        </div>
+        <div class="card-body">
+          <div class="row-2">
+            <div class="field">
+              <label class="field-label">Ganhos de Capital</label>
+              <div class="input-money"><input type="text" class="input money" id="ganhosCapital" placeholder="0,00" /></div>
+              <div class="field-help">Alienação de bens do ativo imobilizado, investimentos e intangíveis.</div>
+            </div>
+            <div class="field">
+              <label class="field-label">Rendimentos de Aplicações Financeiras</label>
+              <div class="input-money"><input type="text" class="input money" id="rendFinanceiros" placeholder="0,00" /></div>
+              <div class="field-help">Renda fixa, renda variável e ganhos líquidos.</div>
+            </div>
+            <div class="field">
+              <label class="field-label">Receitas de Locação (não objeto social)</label>
+              <div class="input-money"><input type="text" class="input money" id="receitaLocacao" placeholder="0,00" /></div>
+              <div class="field-help">Quando a locação não for o objeto social da PJ.</div>
+            </div>
+            <div class="field">
+              <label class="field-label">Juros sobre Tributos a Restituir (SELIC)</label>
+              <div class="input-money"><input type="text" class="input money" id="jurosSelic" placeholder="0,00" /></div>
+              <div class="field-help">Juros equivalentes à SELIC de tributos a restituir/compensar.</div>
+            </div>
+            <div class="field">
+              <label class="field-label">Variações Monetárias Ativas</label>
+              <div class="input-money"><input type="text" class="input money" id="varMonetarias" placeholder="0,00" /></div>
+              <div class="field-help">Direitos de crédito e obrigações em função de câmbio.</div>
+            </div>
+            <div class="field">
+              <label class="field-label">Outras Receitas e Resultados Positivos</label>
+              <div class="input-money"><input type="text" class="input money" id="outrasReceitas" placeholder="0,00" /></div>
+              <div class="field-help">Demais receitas não abrangidas pelos itens acima.</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-foot">
+          <button class="btn btn-ghost" data-back="3">← Voltar</button>
+          <button class="btn btn-primary" id="btnNext4">Continuar →</button>
+        </div>
+      </div>
+
+      <!-- STEP 5: LC 224/25 -->
+      <div class="card hidden" id="step5">
+        <div class="card-head">
+          <span class="step-tag">Etapa 5 de 6</span>
+          <h3>Ajustes do Adicional LC 224/25</h3>
+          <p>A LC 224/25 acresce 10% aos percentuais de presunção quando a receita bruta supera o limite proporcional trimestral de R$ 1.250.000,00, sob as regras das INs RFB 2.305/25 e 2.306/26.</p>
+        </div>
+        <div class="card-body" id="lcBody">
+          <div id="lcAutoBannerArea"></div>
+
+          <div class="info-banner" id="lcInfoBanner">
+            <strong>Limite proporcional trimestral:</strong> R$ 1.250.000,00 (1/4 de R$ 5.000.000,00 anuais). Caso a receita bruta do trimestre exceda esse valor, o adicional de 10% incidirá sobre a parcela excedente.
+          </div>
+
+          <div id="lcSubsequenteWrap" class="hidden">
+            <div class="field">
+              <label class="field-label">Folga acumulada de trimestres anteriores (não utilizada) <span id="folgaAutoTag" class="hidden"><span class="auto-tag">✦ Auto-preenchido</span></span></label>
+              <div class="input-money"><input type="text" class="input money" id="folgaAnterior" placeholder="0,00" /></div>
+              <div class="field-help">Quando em trimestre anterior a receita bruta foi inferior a R$ 1.250.000,00, a diferença pode ser considerada nos trimestres subsequentes (IN 2306, art. 15, § 4º).</div>
+            </div>
+          </div>
+
+          <div id="lcQ4Wrap" class="hidden">
+            <div class="warn-banner">
+              <strong>Ajuste anual (4º trimestre):</strong> No último trimestre, deve-se verificar o limite anual de R$ 5.000.000,00 com base na receita bruta acumulada do ano-calendário (IN 2306, art. 15, § 5º).
+            </div>
+            <div class="row-2">
+              <div class="field">
+                <label class="field-label">Receita Bruta Acumulada Trim. 1, 2 e 3 (Ano) <span id="rbAcumAutoTag" class="hidden"><span class="auto-tag">✦ Auto-preenchido</span></span></label>
+                <div class="input-money"><input type="text" class="input money" id="rbAcumAnterior" placeholder="0,00" /></div>
+                <div class="field-help">Soma das receitas brutas dos três trimestres anteriores do mesmo ano-calendário.</div>
+              </div>
+              <div class="field">
+                <label class="field-label">Soma das Parcelas Excedentes dos Trim. Anteriores <span id="excAcumAutoTag" class="hidden"><span class="auto-tag">✦ Auto-preenchido</span></span></label>
+                <div class="input-money"><input type="text" class="input money" id="excedAcumAnterior" placeholder="0,00" /></div>
+                <div class="field-help">Soma das parcelas que excederam R$ 1.250.000,00 nos trimestres 1, 2 e 3.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="field-label">A empresa iniciou ou encerrou atividades no curso de 2026?</label>
+            <select class="select" id="inicioEncerramento">
+              <option value="nao">Não — empresa ativa o ano inteiro</option>
+              <option value="sim">Sim — atividade parcial</option>
+            </select>
+            <div class="field-help">No caso de início/encerramento (IN 2306, art. 15, § 9º), o limite anual é proporcional aos trimestres em atividade.</div>
+          </div>
+          <div class="field hidden" id="trimAtivosWrap">
+            <label class="field-label">Quantidade de trimestres efetivamente em atividade no ano</label>
+            <select class="select" id="trimAtivos">
+              <option value="1">1 trimestre</option>
+              <option value="2">2 trimestres</option>
+              <option value="3">3 trimestres</option>
+              <option value="4">4 trimestres</option>
+            </select>
+          </div>
+        </div>
+        <div class="card-foot">
+          <button class="btn btn-ghost" data-back="4">← Voltar</button>
+          <button class="btn btn-accent" id="btnCalcular">Calcular Tributos →</button>
+        </div>
+      </div>
+
+      <!-- STEP 6: RESULTADO -->
+      <div class="card hidden" id="step6">
+        <div class="card-head">
+          <span class="step-tag">Resultado da Apuração</span>
+          <h3 id="resultTitle">Apuração do Lucro Presumido — Trimestre</h3>
+          <p id="resultSub">Cálculo de IRPJ e CSLL conforme legislação vigente em 2026.</p>
+        </div>
+        <div class="card-body" id="resultBody">
+          <!-- preenchido via JS -->
+        </div>
+        <div class="card-foot">
+          <button class="btn btn-ghost" id="btnVoltarPainel">← Voltar ao Painel</button>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <button class="btn btn-ghost" onclick="window.print()">🖨 Imprimir</button>
+            <button class="btn btn-success" id="btnSalvarApuracao">💾 Salvar Apuração</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container foot-in">
+      <div class="foot-brand">
+        <div class="brand-logo foot" role="img" aria-label="Tax Accounting"></div>
+        <div class="brand-divider"></div>
+        <div class="foot-txt">
+          <h5>Auditoria e Consultoria Tributária</h5>
+          <p>Simulador desenvolvido para fins informativos</p>
+        </div>
+      </div>
+      <div class="foot-meta">
+        © 2026 · Apuração conforme Lei 9.430/96, Lei 9.249/95, LC 224/25,<br/>
+        Instruções Normativas RFB 2.305/2025 e 2.306/2026
+      </div>
+    </div>
+  </footer>
+
+<script>
+/* ============ CATÁLOGO DE ATIVIDADES ============ */
+const ATIVIDADES = [
+  { id:'com_ind',    nome:'Comércio, Indústria e atividades não especificadas',                                    presIRPJ:0.08,  presCSLL:0.12, ref:'Art. 15, caput, Lei 9.249/95' },
+  { id:'comb',       nome:'Revenda de combustíveis derivados de petróleo, álcool carburante e gás natural',          presIRPJ:0.016, presCSLL:0.12, ref:'Art. 15, § 1º, I, Lei 9.249/95' },
+  { id:'transp_carga',nome:'Transporte de carga',                                                                    presIRPJ:0.08,  presCSLL:0.12, ref:'Art. 15, caput, Lei 9.249/95' },
+  { id:'transp',     nome:'Transporte (exceto carga)',                                                               presIRPJ:0.16,  presCSLL:0.12, ref:'Art. 15, § 1º, II, "a"' },
+  { id:'hosp',       nome:'Serviços hospitalares e de auxílio diagnóstico (Anvisa)',                                 presIRPJ:0.08,  presCSLL:0.12, ref:'Art. 15, § 1º, III, "a" (exceção)' },
+  { id:'serv_geral', nome:'Prestação de serviços em geral',                                                          presIRPJ:0.32,  presCSLL:0.32, ref:'Art. 15, § 1º, III, "a"' },
+  { id:'interm',     nome:'Intermediação de negócios',                                                               presIRPJ:0.32,  presCSLL:0.32, ref:'Art. 15, § 1º, III, "b"' },
+  { id:'adm_locacao',nome:'Administração, locação ou cessão de bens imóveis, móveis e direitos',                     presIRPJ:0.32,  presCSLL:0.32, ref:'Art. 15, § 1º, III, "c"' },
+  { id:'factoring',  nome:'Factoring (assessoria creditícia, gestão de crédito, compra de direitos creditórios)',    presIRPJ:0.32,  presCSLL:0.32, ref:'Art. 15, § 1º, III, "d"' },
+  { id:'construcao_concessao', nome:'Construção/recuperação vinculada a contrato de concessão de serviço público',   presIRPJ:0.32,  presCSLL:0.32, ref:'Art. 15, § 1º, III, "e"' },
+  { id:'esc',        nome:'Empresa Simples de Crédito (ESC) — empréstimo, financiamento, desconto de títulos',       presIRPJ:0.384, presCSLL:0.32, ref:'Art. 15, § 1º, IV, LC 167/19' },
+];
+
+/* ============ ALÍQUOTAS ============ */
+const ALIQ_IRPJ = 0.15;
+const ALIQ_IRPJ_ADIC = 0.10;
+const LIMITE_IRPJ_ADIC_TRIM = 60000;
+const ALIQ_CSLL = 0.09;
+const LIMITE_TRIM_LC224 = 1250000;
+const LIMITE_ANUAL_LC224 = 5000000;
+const ACRESCIMO_LC224 = 0.10;
+
+/* ============ PERSISTÊNCIA ============ */
+const STORAGE_KEY = 'tax_simulador_lp_2026';
+function loadAll(){
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
+  catch(e){ return {}; }
+}
+function saveAll(data){
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+}
+function getSaved(t){ return loadAll()[t] || null; }
+function setSaved(t, payload){
+  const all = loadAll();
+  all[t] = payload;
+  saveAll(all);
+}
+function delSaved(t){
+  const all = loadAll();
+  delete all[t];
+  saveAll(all);
+}
+function clearAllSaved(){
+  localStorage.removeItem(STORAGE_KEY);
+}
+
+/* ============ ESTADO ============ */
+const state = {
+  trimestre: null,
+  razao: '',
+  atividades: [],
+  outras: {ganhosCapital:0, rendFinanceiros:0, receitaLocacao:0, jurosSelic:0, varMonetarias:0, outrasReceitas:0},
+  folgaAnterior: 0,
+  rbAcumAnterior: 0,
+  excedAcumAnterior: 0,
+  inicioEncerramento: 'nao',
+  trimAtivos: 4,
+  lastResult: null,
+};
+
+/* ============ UTILS ============ */
+const fmtMoney = v => 'R$ ' + (v || 0).toLocaleString('pt-BR', {minimumFractionDigits:2, maximumFractionDigits:2});
+const fmtMoneyShort = v => (v || 0).toLocaleString('pt-BR', {minimumFractionDigits:2, maximumFractionDigits:2});
+const fmtPct = p => (p*100).toLocaleString('pt-BR',{minimumFractionDigits:1, maximumFractionDigits:2}) + '%';
+const parseMoney = s => {
+  if(!s) return 0;
+  const v = String(s).replace(/\./g,'').replace(',','.').replace(/[^\d.\-]/g,'');
+  return parseFloat(v) || 0;
+};
+const setMoneyValue = (id, v) => {
+  const el = document.getElementById(id);
+  if(!el) return;
+  el.value = v && v>0 ? v.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2}) : '';
+};
+function maskMoneyInput(el){
+  el.addEventListener('input', e => {
+    let v = e.target.value.replace(/\D/g,'');
+    if(!v){ e.target.value=''; return; }
+    v = (parseInt(v,10)/100).toLocaleString('pt-BR',{minimumFractionDigits:2, maximumFractionDigits:2});
+    e.target.value = v;
+  });
+}
+
+/* =============================================================== */
+/* ============== CÁLCULO DE FOLGA E EXCEDENTES ================= */
+/* =============================================================== */
+/* Calcula folga acumulada disponível para um determinado trimestre  */
+function calcFolgaParaTrimestre(t){
+  // Soma das (limite proporcional - receita_real) dos trimestres anteriores,
+  // somente quando receita_real <= limite efetivo daquele trimestre.
+  // De forma mais simples e correta: folga disponível = soma dos limites
+  // proporcionais dos trimestres anteriores menos soma das receitas brutas
+  // desses trimestres, limitada a >= 0.
+  const all = loadAll();
+  let folga = 0;
+  let cumLim = 0;
+  let cumRec = 0;
+  for(let i=1; i<t; i++){
+    const s = all[i];
+    cumLim += LIMITE_TRIM_LC224;
+    if(s){
+      cumRec += s.receitaBrutaTotal || 0;
+    }
+  }
+  folga = Math.max(0, cumLim - cumRec);
+  return folga;
+}
+
+function getDadosAcumuladosAteQ4(){
+  const all = loadAll();
+  let rb = 0;
+  let exc = 0;
+  for(let i=1; i<=3; i++){
+    const s = all[i];
+    if(s){
+      rb += s.receitaBrutaTotal || 0;
+      exc += s.parcelaExcedenteTrim || 0;
+    }
+  }
+  return { rb, exc };
+}
+
+/* =============================================================== */
+/* ===================== DASHBOARD ============================== */
+/* =============================================================== */
+function renderDashboard(){
+  const grid = document.getElementById('dashGrid');
+  grid.innerHTML = '';
+  const all = loadAll();
+  let totalIRPJ = 0, totalCSLL = 0, totalRB = 0;
+  for(let t=1; t<=4; t++){
+    const s = all[t];
+    const card = document.createElement('div');
+    card.className = 'dash-card ' + (s ? (s.lc224Ativada ? 'saved lc' : 'saved') : 'empty');
+    const trimNomes = {1:'Jan · Fev · Mar', 2:'Abr · Mai · Jun', 3:'Jul · Ago · Set', 4:'Out · Nov · Dez'};
+    if(s){
+      totalIRPJ += s.irpjDevido || 0;
+      totalCSLL += s.csllDevido || 0;
+      totalRB += s.receitaBrutaTotal || 0;
+      card.innerHTML = `
+        <div class="dash-card-head">
+          <div class="t-num">${t}º TRIM<span>${trimNomes[t]}</span></div>
+          <div class="dash-status ${s.lc224Ativada ? 'lc' : 'ok'}">${s.lc224Ativada ? '⚡ Com LC 224' : '✓ Padrão'}</div>
+        </div>
+        <div class="dash-data">
+          <div class="r"><span>Receita Bruta</span><span class="v">${fmtMoneyShort(s.receitaBrutaTotal)}</span></div>
+          <div class="r"><span>Base IRPJ</span><span class="v">${fmtMoneyShort(s.irpjBase)}</span></div>
+          <div class="r"><span>IRPJ Devido</span><span class="v">${fmtMoneyShort(s.irpjDevido)}</span></div>
+          <div class="r"><span>CSLL Devida</span><span class="v">${fmtMoneyShort(s.csllDevido)}</span></div>
+          ${s.parcelaExcedenteTrim>0 ? `<div class="r"><span>Exced. LC 224</span><span class="v">${fmtMoneyShort(s.parcelaExcedenteTrim)}</span></div>` : ''}
+        </div>
+        <div class="dash-actions">
+          <button class="dash-btn ghost" data-act="view" data-t="${t}">Ver</button>
+          <button class="dash-btn accent" data-act="edit" data-t="${t}">Editar</button>
+          <button class="dash-btn danger" data-act="del" data-t="${t}">Excluir</button>
+        </div>
+      `;
+    } else {
+      card.innerHTML = `
+        <div class="dash-card-head">
+          <div class="t-num">${t}º TRIM<span>${trimNomes[t]}</span></div>
+          <div class="dash-status">Não Calculado</div>
+        </div>
+        <div class="dash-data"><div class="empty-txt">Apuração ainda não realizada para este trimestre.</div></div>
+        <div class="dash-actions">
+          <button class="dash-btn primary" data-act="new" data-t="${t}">Calcular ${t}º Trimestre</button>
+        </div>
+      `;
+    }
+    grid.appendChild(card);
+  }
+  // Footer info
+  const foot = document.getElementById('dashFootInfo');
+  const total = totalIRPJ + totalCSLL;
+  if(totalRB>0){
+    foot.innerHTML = `
+      Acumulado salvo no ano: <strong>RB ${fmtMoney(totalRB)}</strong> · <strong>IRPJ ${fmtMoney(totalIRPJ)}</strong> · <strong>CSLL ${fmtMoney(totalCSLL)}</strong> · <strong>Total ${fmtMoney(total)}</strong>
+    `;
+  } else {
+    foot.innerHTML = `Inicie pelo 1º trimestre ou escolha qualquer trimestre. As apurações salvas serão usadas automaticamente nos cálculos seguintes.`;
+  }
+  // Bind dashboard buttons
+  grid.querySelectorAll('[data-act]').forEach(b=>{
+    b.addEventListener('click', e=>{
+      const t = parseInt(e.target.dataset.t, 10);
+      const act = e.target.dataset.act;
+      if(act==='new'){ startNewApuracao(t); }
+      else if(act==='edit'){ startEditApuracao(t); }
+      else if(act==='view'){ viewApuracao(t); }
+      else if(act==='del'){
+        if(confirm(`Excluir a apuração salva do ${t}º trimestre? Esta ação não pode ser desfeita.`)){
+          delSaved(t);
+          renderDashboard();
+        }
+      }
+    });
+  });
+}
+
+function startNewApuracao(t){
+  resetState();
+  state.trimestre = t || null;
+  showWizard();
+  prepareStep1(t);
+}
+function startEditApuracao(t){
+  const s = getSaved(t);
+  if(!s){ alert('Apuração não encontrada.'); return; }
+  resetState();
+  state.trimestre = t;
+  state.razao = s.razao || '';
+  state.atividades = (s.atividades || []).map(a=>({ id:a.id, receita:a.receita }));
+  state.outras = Object.assign({}, s.outras);
+  state.folgaAnterior = s.folgaAnterior || 0;
+  state.rbAcumAnterior = s.rbAcumAnterior || 0;
+  state.excedAcumAnterior = s.excedAcumAnterior || 0;
+  state.inicioEncerramento = s.inicioEncerramento || 'nao';
+  state.trimAtivos = s.trimAtivos || 4;
+  showWizard();
+  prepareStep1(t);
+  document.getElementById('razaoSocial').value = state.razao;
+  renderActivities();
+  document.getElementById('reentryBannerArea').innerHTML = `
+    <div class="saved-data-banner">
+      <span class="ic">i</span>
+      <div>Editando apuração salva do <strong>${t}º trimestre</strong>. Os dados foram carregados — modifique o que precisar e salve novamente para sobrescrever.</div>
+    </div>
+  `;
+}
+function viewApuracao(t){
+  const s = getSaved(t);
+  if(!s){ return; }
+  state.trimestre = t;
+  state.razao = s.razao || '';
+  state.lastResult = s;
+  state.outras = Object.assign({}, s.outras);
+  showWizard();
+  renderResultado(s);
+  document.getElementById('btnSalvarApuracao').textContent = '💾 Atualizar Apuração Salva';
+  showStep(6);
+}
+function resetState(){
+  state.trimestre = null;
+  state.razao = '';
+  state.atividades = [];
+  state.outras = {ganhosCapital:0, rendFinanceiros:0, receitaLocacao:0, jurosSelic:0, varMonetarias:0, outrasReceitas:0};
+  state.folgaAnterior = 0;
+  state.rbAcumAnterior = 0;
+  state.excedAcumAnterior = 0;
+  state.inicioEncerramento = 'nao';
+  state.trimAtivos = 4;
+  state.lastResult = null;
+  // Limpa campos do step 4
+  ['ganhosCapital','rendFinanceiros','receitaLocacao','jurosSelic','varMonetarias','outrasReceitas',
+   'folgaAnterior','rbAcumAnterior','excedAcumAnterior','razaoSocial'].forEach(id=>{
+    const el = document.getElementById(id);
+    if(el) el.value = '';
+  });
+}
+function showDashboard(){
+  document.getElementById('dashboard').classList.remove('hidden');
+  document.getElementById('progressWrap').classList.add('hidden');
+  for(let i=1;i<=6;i++) document.getElementById('step'+i).classList.add('hidden');
+  renderDashboard();
+}
+function showWizard(){
+  document.getElementById('progressWrap').classList.remove('hidden');
+}
+function prepareStep1(t){
+  document.querySelectorAll('#trimestreGrid .opt-card').forEach(c=>{
+    c.classList.remove('selected');
+    const v = parseInt(c.dataset.val,10);
+    if(getSaved(v)) c.classList.add('has-saved'); else c.classList.remove('has-saved');
+    if(v===t) c.classList.add('selected');
+  });
+  document.getElementById('reentryBannerArea').innerHTML = '';
+  showStep(1);
+}
+
+/* ============ NAVEGAÇÃO ============ */
+function showStep(n){
+  for(let i=1;i<=6;i++){
+    document.getElementById('step'+i).classList.toggle('hidden', i!==n);
+  }
+  document.querySelectorAll('.step-dot').forEach(d=>{
+    const s = parseInt(d.dataset.s,10);
+    d.classList.toggle('active', s===n);
+    d.classList.toggle('done', s<n);
+  });
+  const total = 5;
+  const pct = ((n-1)/total)*100;
+  document.getElementById('progressFill').style.width = `calc((100% - 36px) * ${pct/100})`;
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+/* ============ STEP 1 ============ */
+document.querySelectorAll('#trimestreGrid .opt-card').forEach(c=>{
+  c.addEventListener('click', ()=>{
+    document.querySelectorAll('#trimestreGrid .opt-card').forEach(x=>x.classList.remove('selected'));
+    c.classList.add('selected');
+    state.trimestre = parseInt(c.dataset.val,10);
+    // Banner de re-entry?
+    const saved = getSaved(state.trimestre);
+    if(saved){
+      document.getElementById('reentryBannerArea').innerHTML = `
+        <div class="saved-data-banner">
+          <span class="ic">!</span>
+          <div>Já existe uma apuração salva para o <strong>${state.trimestre}º trimestre</strong>. Continuar com novos dados <strong>sobrescreverá</strong> a apuração anterior quando você salvar.</div>
+        </div>
+      `;
+    } else {
+      document.getElementById('reentryBannerArea').innerHTML = '';
+    }
+  });
+});
+document.getElementById('btnNext1').addEventListener('click', ()=>{
+  if(!state.trimestre){ alert('Selecione o trimestre da apuração.'); return; }
+  state.razao = document.getElementById('razaoSocial').value.trim();
+  if(state.atividades.length===0){
+    // Tenta pré-carregar atividades do trimestre imediatamente anterior salvo
+    const prev = getMostRecentSavedPrev(state.trimestre);
+    if(prev && prev.atividades && prev.atividades.length>0){
+      state.atividades = prev.atividades.map(a=>({ id:a.id, receita:0 }));
+    } else {
+      addActivity();
+    }
+  }
+  renderActivities();
+  showStep(2);
+});
+document.getElementById('btnVoltarDash').addEventListener('click', ()=>{
+  showDashboard();
+});
+function getMostRecentSavedPrev(t){
+  for(let i=t-1; i>=1; i--){
+    const s = getSaved(i);
+    if(s) return s;
+  }
+  return null;
+}
+
+/* ============ STEP 2 — ATIVIDADES ============ */
+function addActivity(){
+  state.atividades.push({ id:'com_ind', receita:0 });
+  renderActivities();
+}
+function removeActivity(i){
+  if(state.atividades.length<=1){ alert('Mantenha ao menos uma atividade.'); return; }
+  state.atividades.splice(i,1);
+  renderActivities();
+}
+function renderActivities(){
+  const list = document.getElementById('activityList');
+  list.innerHTML = '';
+  state.atividades.forEach((a,i)=>{
+    const at = ATIVIDADES.find(x=>x.id===a.id) || ATIVIDADES[0];
+    const row = document.createElement('div');
+    row.className = 'activity-row';
+    const opts = ATIVIDADES.map(x=>`<option value="${x.id}" ${x.id===a.id?'selected':''}>${x.nome} (IRPJ ${fmtPct(x.presIRPJ)} · CSLL ${fmtPct(x.presCSLL)})</option>`).join('');
+    row.innerHTML = `
+      <div class="field">
+        <label class="field-label">Atividade #${i+1} <span class="req">*</span></label>
+        <select class="select" data-i="${i}">${opts}</select>
+      </div>
+      <div class="field">
+        <label class="field-label">Presunção</label>
+        <div class="info-banner" style="margin:0;padding:10px 12px;font-size:.78rem"><strong>IRPJ:</strong> ${fmtPct(at.presIRPJ)}<br/><strong>CSLL:</strong> ${fmtPct(at.presCSLL)}</div>
+      </div>
+      <button class="btn-remove" data-rm="${i}" title="Remover">×</button>
+    `;
+    list.appendChild(row);
+  });
+  list.querySelectorAll('select').forEach(s=>{
+    s.addEventListener('change', e=>{
+      const i = parseInt(e.target.dataset.i,10);
+      state.atividades[i].id = e.target.value;
+      renderActivities();
+    });
+  });
+  list.querySelectorAll('[data-rm]').forEach(b=>{
+    b.addEventListener('click', e=>{
+      removeActivity(parseInt(e.target.dataset.rm,10));
+    });
+  });
+}
+document.getElementById('btnAddActivity').addEventListener('click', addActivity);
+document.getElementById('btnNext2').addEventListener('click', ()=>{
+  renderReceitas();
+  showStep(3);
+});
+
+/* ============ STEP 3 — RECEITAS ============ */
+function renderReceitas(){
+  const c = document.getElementById('receitasContainer');
+  c.innerHTML = '';
+  state.atividades.forEach((a,i)=>{
+    const at = ATIVIDADES.find(x=>x.id===a.id);
+    const wrap = document.createElement('div');
+    wrap.className = 'field';
+    wrap.innerHTML = `
+      <label class="field-label">Receita Bruta — ${at.nome} <span class="req">*</span></label>
+      <div class="input-money"><input type="text" class="input money" data-rec="${i}" placeholder="0,00" value="${a.receita ? a.receita.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2}) : ''}"/></div>
+      <div class="field-help">Presunção aplicável: IRPJ ${fmtPct(at.presIRPJ)} · CSLL ${fmtPct(at.presCSLL)}. ${at.ref}</div>
+    `;
+    c.appendChild(wrap);
+  });
+  c.querySelectorAll('input.money').forEach(el=>maskMoneyInput(el));
+}
+document.getElementById('btnNext3').addEventListener('click', ()=>{
+  document.querySelectorAll('#receitasContainer input[data-rec]').forEach(el=>{
+    const i = parseInt(el.dataset.rec,10);
+    state.atividades[i].receita = parseMoney(el.value);
+  });
+  // Preencher campos de step 4 se editando
+  setMoneyValue('ganhosCapital', state.outras.ganhosCapital);
+  setMoneyValue('rendFinanceiros', state.outras.rendFinanceiros);
+  setMoneyValue('receitaLocacao', state.outras.receitaLocacao);
+  setMoneyValue('jurosSelic', state.outras.jurosSelic);
+  setMoneyValue('varMonetarias', state.outras.varMonetarias);
+  setMoneyValue('outrasReceitas', state.outras.outrasReceitas);
+  showStep(4);
+});
+
+/* ============ STEP 4 — OUTRAS RECEITAS ============ */
+document.querySelectorAll('#step4 input.money').forEach(el=>maskMoneyInput(el));
+document.getElementById('btnNext4').addEventListener('click', ()=>{
+  state.outras.ganhosCapital   = parseMoney(document.getElementById('ganhosCapital').value);
+  state.outras.rendFinanceiros = parseMoney(document.getElementById('rendFinanceiros').value);
+  state.outras.receitaLocacao  = parseMoney(document.getElementById('receitaLocacao').value);
+  state.outras.jurosSelic      = parseMoney(document.getElementById('jurosSelic').value);
+  state.outras.varMonetarias   = parseMoney(document.getElementById('varMonetarias').value);
+  state.outras.outrasReceitas  = parseMoney(document.getElementById('outrasReceitas').value);
+  prepareLCStep();
+  showStep(5);
+});
+
+/* ============ STEP 5 — LC 224/25 ============ */
+function prepareLCStep(){
+  document.getElementById('lcSubsequenteWrap').classList.toggle('hidden', state.trimestre===1);
+  document.getElementById('lcQ4Wrap').classList.toggle('hidden', state.trimestre!==4);
+
+  // Auto-preencher folga acumulada
+  const auto = document.getElementById('lcAutoBannerArea');
+  auto.innerHTML = '';
+  if(state.trimestre>1){
+    const folgaAuto = calcFolgaParaTrimestre(state.trimestre);
+    // Verifica se há saved data para os anteriores
+    const all = loadAll();
+    let allPriorSaved = true;
+    for(let i=1;i<state.trimestre;i++) if(!all[i]) allPriorSaved = false;
+
+    if(allPriorSaved){
+      setMoneyValue('folgaAnterior', folgaAuto);
+      state.folgaAnterior = folgaAuto;
+      document.getElementById('folgaAutoTag').classList.remove('hidden');
+      auto.innerHTML = `
+        <div class="saved-data-banner">
+          <span class="ic">✦</span>
+          <div>Dados preenchidos automaticamente a partir das apurações salvas dos trimestres anteriores. <strong>Folga acumulada: ${fmtMoney(folgaAuto)}</strong>.</div>
+        </div>
+      `;
+    } else {
+      document.getElementById('folgaAutoTag').classList.add('hidden');
+      const faltantes = [];
+      for(let i=1;i<state.trimestre;i++) if(!all[i]) faltantes.push(i+'º');
+      auto.innerHTML = `
+        <div class="warn-banner">
+          <strong>Atenção:</strong> Não há apuração salva para os trimestres ${faltantes.join(', ')}. Para auto-preenchimento da folga acumulada, calcule e salve os trimestres anteriores primeiro, ou informe a folga manualmente abaixo.
+        </div>
+      `;
+      setMoneyValue('folgaAnterior', state.folgaAnterior);
+    }
+  }
+
+  // Auto-preencher Q4
+  if(state.trimestre===4){
+    const all = loadAll();
+    const allQ123Saved = all[1] && all[2] && all[3];
+    if(allQ123Saved){
+      const acc = getDadosAcumuladosAteQ4();
+      setMoneyValue('rbAcumAnterior', acc.rb);
+      setMoneyValue('excedAcumAnterior', acc.exc);
+      state.rbAcumAnterior = acc.rb;
+      state.excedAcumAnterior = acc.exc;
+      document.getElementById('rbAcumAutoTag').classList.remove('hidden');
+      document.getElementById('excAcumAutoTag').classList.remove('hidden');
+    } else {
+      document.getElementById('rbAcumAutoTag').classList.add('hidden');
+      document.getElementById('excAcumAutoTag').classList.add('hidden');
+      setMoneyValue('rbAcumAnterior', state.rbAcumAnterior);
+      setMoneyValue('excedAcumAnterior', state.excedAcumAnterior);
+    }
+  }
+}
+document.getElementById('inicioEncerramento').addEventListener('change', e=>{
+  document.getElementById('trimAtivosWrap').classList.toggle('hidden', e.target.value!=='sim');
+});
+document.querySelectorAll('#step5 input.money').forEach(el=>maskMoneyInput(el));
+
+document.getElementById('btnCalcular').addEventListener('click', ()=>{
+  state.folgaAnterior = parseMoney(document.getElementById('folgaAnterior').value);
+  state.rbAcumAnterior = parseMoney(document.getElementById('rbAcumAnterior').value);
+  state.excedAcumAnterior = parseMoney(document.getElementById('excedAcumAnterior').value);
+  state.inicioEncerramento = document.getElementById('inicioEncerramento').value;
+  state.trimAtivos = parseInt(document.getElementById('trimAtivos').value,10);
+  const ok = calcularEMostrar();
+  if(ok){
+    document.getElementById('btnSalvarApuracao').textContent = '💾 Salvar Apuração';
+    showStep(6);
+  }
+});
+
+/* ============ BACK ============ */
+document.querySelectorAll('[data-back]').forEach(b=>{
+  b.addEventListener('click', ()=>showStep(parseInt(b.dataset.back,10)));
+});
+
+document.getElementById('btnVoltarPainel').addEventListener('click', ()=>{
+  showDashboard();
+});
+
+/* ============ NOVA APURAÇÃO / LIMPAR / EXPORTAR EXCEL ============ */
+document.getElementById('btnNovaApuracao').addEventListener('click', ()=>{
+  startNewApuracao();
+});
+document.getElementById('btnLimparTudo').addEventListener('click', ()=>{
+  if(confirm('Limpar TODAS as apurações salvas de 2026? Esta ação não pode ser desfeita.')){
+    clearAllSaved();
+    renderDashboard();
+  }
+});
+function excelCell(v){
+  if(v === null || v === undefined) return '';
+  return String(v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function excelMoney(v){
+  return (v || 0).toLocaleString('pt-BR', {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+function exportarExcel(){
+  const data = loadAll();
+  const keys = Object.keys(data).sort((a,b)=>Number(a)-Number(b));
+  if(keys.length===0){ alert('Não há apurações salvas para exportar.'); return; }
+
+  let totalRB = 0, totalIRPJ = 0, totalCSLL = 0, totalGeral = 0;
+  let resumoRows = '';
+  let atividadesRows = '';
+
+  keys.forEach(k=>{
+    const r = data[k] || {};
+    totalRB += r.receitaBrutaTotal || 0;
+    totalIRPJ += r.irpjDevido || 0;
+    totalCSLL += r.csllDevido || 0;
+    totalGeral += r.totalTrim || ((r.irpjDevido || 0) + (r.csllDevido || 0));
+
+    resumoRows += `
+      <tr>
+        <td>${excelCell(k + 'º trimestre')}</td>
+        <td>${excelCell(r.razao || '')}</td>
+        <td>${excelMoney(r.receitaBrutaTotal)}</td>
+        <td>${excelMoney(r.totalOutras)}</td>
+        <td>${excelMoney(r.irpjBase)}</td>
+        <td>${excelMoney(r.irpjDevido)}</td>
+        <td>${excelMoney(r.csllBase)}</td>
+        <td>${excelMoney(r.csllDevido)}</td>
+        <td>${excelMoney(r.totalTrim)}</td>
+        <td>${r.lc224Ativada ? 'Sim' : 'Não'}</td>
+        <td>${excelMoney(r.parcelaExcedenteTrim)}</td>
+      </tr>`;
+
+    (r.detalhePorAtividade || []).forEach(a=>{
+      atividadesRows += `
+        <tr>
+          <td>${excelCell(k + 'º trimestre')}</td>
+          <td>${excelCell(a.nome || a.id || '')}</td>
+          <td>${excelMoney(a.receita)}</td>
+          <td>${excelMoney(a.naoExced)}</td>
+          <td>${excelMoney(a.exced)}</td>
+          <td>${excelMoney(a.bIRPJn + a.bIRPJa)}</td>
+          <td>${excelMoney(a.bCSLLn + a.bCSLLa)}</td>
+        </tr>`;
+    });
+  });
+
+  const html = `
+    <html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40">
+    <head>
+      <meta charset="UTF-8">
+      <!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>Apurações 2026</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]-->
+      <style>
+        body{font-family:Arial, sans-serif;}
+        h1{color:#0D1A6B;font-size:20px;}
+        h2{color:#1C3AF5;font-size:16px;margin-top:24px;}
+        table{border-collapse:collapse;width:100%;}
+        th{background:#1C3AF5;color:#FFFFFF;font-weight:bold;}
+        th,td{border:1px solid #CBD5E1;padding:8px;font-size:12px;}
+        .total td{background:#EEF1FF;font-weight:bold;}
+      </style>
+    </head>
+    <body>
+      <h1>Relatório de Apurações - Lucro Presumido 2026</h1>
+      <p>Arquivo gerado pelo Simulador Lucro Presumido 2026.</p>
+
+      <h2>Resumo por trimestre</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Trimestre</th><th>Empresa</th><th>Receita Bruta</th><th>Outras Receitas</th><th>Base IRPJ</th><th>IRPJ Devido</th><th>Base CSLL</th><th>CSLL Devida</th><th>Total</th><th>LC 224/25</th><th>Excedente LC 224/25</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${resumoRows}
+          <tr class="total"><td colspan="2">Total no ano</td><td>${excelMoney(totalRB)}</td><td></td><td></td><td>${excelMoney(totalIRPJ)}</td><td></td><td>${excelMoney(totalCSLL)}</td><td>${excelMoney(totalGeral)}</td><td></td><td></td></tr>
+        </tbody>
+      </table>
+
+      <h2>Detalhamento por atividade</h2>
+      <table>
+        <thead>
+          <tr><th>Trimestre</th><th>Atividade</th><th>Receita</th><th>Parcela não excedente</th><th>Parcela excedente</th><th>Base IRPJ da atividade</th><th>Base CSLL da atividade</th></tr>
+        </thead>
+        <tbody>${atividadesRows || '<tr><td colspan="7">Sem detalhamento de atividades.</td></tr>'}</tbody>
+      </table>
+    </body>
+    </html>`;
+
+  const blob = new Blob(['\ufeff' + html], {type:'application/vnd.ms-excel;charset=utf-8'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'apuracoes-lucro-presumido-2026.xls';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+document.getElementById('btnExportar').addEventListener('click', exportarExcel);
+
+/* ============================================================== */
+/* ====================== CÁLCULO PRINCIPAL ===================== */
+/* ============================================================== */
+/* Função reutilizável: calcula IRPJ devido para um trimestre dado um  */
+/* conjunto de atividades, outras receitas e parcela excedente LC 224.  */
+function computeIRPJ(atividades, totalOutras, excedenteLC){
+  const totalRec = atividades.reduce((s,a)=>s+a.receita,0);
+  let baseNormal = 0, baseAcrescimo = 0;
+  atividades.forEach(a=>{
+    const at = ATIVIDADES.find(x=>x.id===a.id);
+    const prop = totalRec>0 ? a.receita/totalRec : 0;
+    const excedAt = excedenteLC * prop;
+    const naoExced = a.receita - excedAt;
+    const presIRPJacresc = at.presIRPJ + ACRESCIMO_LC224 * at.presIRPJ;
+    baseNormal += naoExced * at.presIRPJ;
+    baseAcrescimo += excedAt * presIRPJacresc;
+  });
+  const base = baseNormal + baseAcrescimo + totalOutras;
+  const principal = base * ALIQ_IRPJ;
+  const adicional = Math.max(0, base - LIMITE_IRPJ_ADIC_TRIM) * ALIQ_IRPJ_ADIC;
+  return { base, baseNormal, baseAcrescimo, principal, adicional, devido: principal+adicional };
+}
+function computeCSLL(atividades, totalOutras, excedenteLC){
+  const totalRec = atividades.reduce((s,a)=>s+a.receita,0);
+  let baseNormal = 0, baseAcrescimo = 0;
+  atividades.forEach(a=>{
+    const at = ATIVIDADES.find(x=>x.id===a.id);
+    const prop = totalRec>0 ? a.receita/totalRec : 0;
+    const excedAt = excedenteLC * prop;
+    const naoExced = a.receita - excedAt;
+    const presCSLLacresc = at.presCSLL + ACRESCIMO_LC224 * at.presCSLL;
+    baseNormal += naoExced * at.presCSLL;
+    baseAcrescimo += excedAt * presCSLLacresc;
+  });
+  const base = baseNormal + baseAcrescimo + totalOutras;
+  return { base, baseNormal, baseAcrescimo, devido: base * ALIQ_CSLL };
+}
+
+function calcularEMostrar(){
+  const receitaBrutaTotal = state.atividades.reduce((s,a)=>s+a.receita, 0);
+  if(receitaBrutaTotal<=0){ alert('Informe pelo menos uma receita bruta para apurar o tributo.'); showStep(3); return false; }
+
+  const trimAtivos = (state.inicioEncerramento==='sim') ? state.trimAtivos : 4;
+  const limiteAnualEfetivo = LIMITE_TRIM_LC224 * trimAtivos;
+  const limiteTrimestral = LIMITE_TRIM_LC224 + (state.trimestre>1 ? state.folgaAnterior : 0);
+
+  let parcelaExcedenteTrim = Math.max(0, receitaBrutaTotal - limiteTrimestral);
+  const folgaGeradaTrim = Math.max(0, limiteTrimestral - receitaBrutaTotal);
+
+  const totalOutras =
+    state.outras.ganhosCapital + state.outras.rendFinanceiros + state.outras.receitaLocacao +
+    state.outras.jurosSelic + state.outras.varMonetarias + state.outras.outrasReceitas;
+
+  // Cálculo inicial com a parcela excedente do trimestre
+  let irpj = computeIRPJ(state.atividades, totalOutras, parcelaExcedenteTrim);
+  let csll = computeCSLL(state.atividades, totalOutras, parcelaExcedenteTrim);
+
+  // ===== Ajuste do Q4 (IN 2306, art. 15, § 5º) =====
+  let ajusteQ4 = null;
+  let creditoIRPJ = 0;
+  let creditoCSLL = 0;
+
+  if(state.trimestre===4){
+    const rbAcumAno = state.rbAcumAnterior + receitaBrutaTotal;
+    const somatorioExcedAnteriores = state.excedAcumAnterior;
+    const parcelaExcedAno = Math.max(0, rbAcumAno - limiteAnualEfetivo);
+    const all = loadAll();
+
+    if(rbAcumAno <= limiteAnualEfetivo){
+      /* HIPÓTESE I: receita anual <= limite anual → sem acréscimo no Q4 */
+      parcelaExcedenteTrim = 0;
+      irpj = computeIRPJ(state.atividades, totalOutras, 0);
+      csll = computeCSLL(state.atividades, totalOutras, 0);
+
+      // Recalcula trimestres anteriores que aplicaram acréscimo
+      const recalc = recalcularTrimsAnteriores({modo:'zerar'}, all);
+      creditoIRPJ = recalc.creditoIRPJ;
+      creditoCSLL = recalc.creditoCSLL;
+
+      ajusteQ4 = {
+        hipotese: 'I',
+        descricao: 'I — Receita bruta acumulada do ano-calendário INFERIOR ao limite anual',
+        rbAcumAno, limiteAnualEfetivo, somatorioExcedAnteriores, parcelaExcedAno,
+        recalc
+      };
+    } else if(parcelaExcedAno < somatorioExcedAnteriores){
+      /* HIPÓTESE II: excedente anual < soma excedentes anteriores */
+      parcelaExcedenteTrim = 0;
+      irpj = computeIRPJ(state.atividades, totalOutras, 0);
+      csll = computeCSLL(state.atividades, totalOutras, 0);
+
+      const recalc = recalcularTrimsAnteriores({modo:'proporcional', excedAno:parcelaExcedAno, somaExc:somatorioExcedAnteriores}, all);
+      creditoIRPJ = recalc.creditoIRPJ;
+      creditoCSLL = recalc.creditoCSLL;
+
+      ajusteQ4 = {
+        hipotese: 'II',
+        descricao: 'II — Excedente anual INFERIOR à soma dos excedentes dos trimestres anteriores',
+        rbAcumAno, limiteAnualEfetivo, somatorioExcedAnteriores, parcelaExcedAno,
+        recalc
+      };
+    } else {
+      /* HIPÓTESE III: excedente anual >= soma excedentes anteriores → limita exced Q4 */
+      const excedLimitado = parcelaExcedAno - somatorioExcedAnteriores;
+      parcelaExcedenteTrim = excedLimitado;
+      irpj = computeIRPJ(state.atividades, totalOutras, excedLimitado);
+      csll = computeCSLL(state.atividades, totalOutras, excedLimitado);
+
+      ajusteQ4 = {
+        hipotese: 'III',
+        descricao: 'III — Excedente anual SUPERIOR à soma dos excedentes dos trimestres anteriores',
+        rbAcumAno, limiteAnualEfetivo, somatorioExcedAnteriores, parcelaExcedAno, excedLimitado
+      };
+    }
+  }
+
+  // Aplica créditos
+  let irpjDevidoFinal = irpj.devido;
+  let csllDevidoFinal = csll.devido;
+  let restituirIRPJ = 0;
+  let restituirCSLL = 0;
+
+  if(state.trimestre===4 && (creditoIRPJ>0 || creditoCSLL>0)){
+    // Dedução do Q4
+    if(creditoIRPJ > irpj.devido){
+      restituirIRPJ = creditoIRPJ - irpj.devido;
+      irpjDevidoFinal = 0;
+    } else {
+      irpjDevidoFinal = irpj.devido - creditoIRPJ;
+    }
+    if(creditoCSLL > csll.devido){
+      restituirCSLL = creditoCSLL - csll.devido;
+      csllDevidoFinal = 0;
+    } else {
+      csllDevidoFinal = csll.devido - creditoCSLL;
+    }
+  }
+
+  const totalTrim = irpjDevidoFinal + csllDevidoFinal;
+  const lc224Ativada = parcelaExcedenteTrim > 0;
+
+  // Detalhe por atividade
+  const detalhePorAtividade = state.atividades.map(a=>{
+    const at = ATIVIDADES.find(x=>x.id===a.id);
+    const prop = receitaBrutaTotal>0 ? a.receita/receitaBrutaTotal : 0;
+    const exced = parcelaExcedenteTrim * prop;
+    const naoExced = a.receita - exced;
+    const presIRPJacresc = at.presIRPJ + ACRESCIMO_LC224 * at.presIRPJ;
+    const presCSLLacresc = at.presCSLL + ACRESCIMO_LC224 * at.presCSLL;
+    return {
+      id: a.id, nome: at.nome, ref: at.ref, receita: a.receita,
+      naoExced, exced,
+      presIRPJ: at.presIRPJ, presIRPJacresc,
+      presCSLL: at.presCSLL, presCSLLacresc,
+      bIRPJn: naoExced*at.presIRPJ, bIRPJa: exced*presIRPJacresc,
+      bCSLLn: naoExced*at.presCSLL, bCSLLa: exced*presCSLLacresc
+    };
+  });
+
+  const result = {
+    trimestre: state.trimestre, razao: state.razao,
+    atividades: state.atividades.map(a=>({id:a.id, receita:a.receita})),
+    outras: Object.assign({}, state.outras),
+    folgaAnterior: state.folgaAnterior,
+    rbAcumAnterior: state.rbAcumAnterior, excedAcumAnterior: state.excedAcumAnterior,
+    inicioEncerramento: state.inicioEncerramento, trimAtivos: state.trimAtivos,
+    receitaBrutaTotal, totalOutras,
+    detalhePorAtividade,
+    limiteTrimestral, parcelaExcedenteTrim, folgaGeradaTrim, limiteAnualEfetivo,
+    baseIRPJ_normal: irpj.baseNormal, baseIRPJ_acrescimo: irpj.baseAcrescimo, baseIRPJ_final: irpj.base, irpjBase: irpj.base,
+    baseCSLL_normal: csll.baseNormal, baseCSLL_acrescimo: csll.baseAcrescimo, baseCSLL_final: csll.base, csllBase: csll.base,
+    irpjPrincipal: irpj.principal, irpjAdicional: irpj.adicional,
+    irpjAntesCredito: irpj.devido, csllAntesCredito: csll.devido,
+    creditoIRPJ, creditoCSLL,
+    irpjDevido: irpjDevidoFinal, csllDevido: csllDevidoFinal, totalTrim,
+    restituirIRPJ, restituirCSLL,
+    lc224Ativada, ajusteQ4,
+    timestamp: new Date().toISOString()
+  };
+  state.lastResult = result;
+  renderResultado(result);
+  return true;
+}
+
+/* Recalcula trimestres anteriores conforme modo (zerar ou proporcional) */
+function recalcularTrimsAnteriores(opts, all){
+  let creditoIRPJ = 0, creditoCSLL = 0;
+  const detalhes = [];
+  for(let i=1; i<=3; i++){
+    const s = all[i];
+    if(!s) continue;
+    if(!(s.parcelaExcedenteTrim > 0)) continue;
+
+    let novoExced;
+    if(opts.modo === 'zerar'){
+      novoExced = 0;
+    } else if(opts.modo === 'proporcional'){
+      const razao = opts.somaExc>0 ? (s.parcelaExcedenteTrim / opts.somaExc) : 0;
+      novoExced = razao * opts.excedAno;
+    }
+
+    const totalOutrasS = (s.totalOutras !== undefined) ? s.totalOutras :
+      ((s.outras?.ganhosCapital||0)+(s.outras?.rendFinanceiros||0)+(s.outras?.receitaLocacao||0)+(s.outras?.jurosSelic||0)+(s.outras?.varMonetarias||0)+(s.outras?.outrasReceitas||0));
+    const recIRPJ = computeIRPJ(s.atividades, totalOutrasS, novoExced);
+    const recCSLL = computeCSLL(s.atividades, totalOutrasS, novoExced);
+
+    const diffIRPJ = (s.irpjAntesCredito !== undefined ? s.irpjAntesCredito : s.irpjDevido) - recIRPJ.devido;
+    const diffCSLL = (s.csllAntesCredito !== undefined ? s.csllAntesCredito : s.csllDevido) - recCSLL.devido;
+    creditoIRPJ += Math.max(0, diffIRPJ);
+    creditoCSLL += Math.max(0, diffCSLL);
+
+    detalhes.push({
+      t: i,
+      excedOriginal: s.parcelaExcedenteTrim,
+      excedRecalculado: novoExced,
+      irpjOriginal: s.irpjAntesCredito !== undefined ? s.irpjAntesCredito : s.irpjDevido,
+      irpjRecalculado: recIRPJ.devido,
+      diffIRPJ: Math.max(0,diffIRPJ),
+      csllOriginal: s.csllAntesCredito !== undefined ? s.csllAntesCredito : s.csllDevido,
+      csllRecalculado: recCSLL.devido,
+      diffCSLL: Math.max(0,diffCSLL)
+    });
+  }
+  return { creditoIRPJ, creditoCSLL, detalhes };
+}
+
+/* ============ RENDER RESULTADO ============ */
+function renderResultado(r){
+  const trimLbl = `${r.trimestre}º Trimestre / 2026`;
+  document.getElementById('resultTitle').textContent = `Apuração do Lucro Presumido — ${trimLbl}${r.razao ? ' · ' + r.razao : ''}`;
+  document.getElementById('resultSub').textContent = `Receita Bruta total do trimestre: ${fmtMoney(r.receitaBrutaTotal)} · Outras receitas: ${fmtMoney(r.totalOutras)}`;
+
+  const body = document.getElementById('resultBody');
+  let html = '';
+
+  // ALERTA DE RESTITUIÇÃO (Q4)
+  if(r.trimestre===4 && (r.restituirIRPJ>0 || r.restituirCSLL>0 || (r.creditoIRPJ>0 || r.creditoCSLL>0))){
+    const totalCred = r.creditoIRPJ + r.creditoCSLL;
+    const totalRest = r.restituirIRPJ + r.restituirCSLL;
+    html += `
+      <div class="restitution-alert">
+        <span class="ra-tag">✦ Crédito Apurado · LC 224/25</span>
+        <h4>Foi apurado crédito a favor da empresa no ajuste anual da LC 224/25</h4>
+        <p>Conforme IN RFB 2.306/2026, art. 15, § 5º, o adicional de 10% nos percentuais de presunção <strong>aplicado em trimestres anteriores não se confirmou</strong> ao final do ano-calendário (hipótese ${r.ajusteQ4?.hipotese || '—'}). Os valores foram <strong>recalculados</strong> e a diferença gera crédito a deduzir do IRPJ e da CSLL do 4º trimestre.</p>
+        <div class="ra-grid">
+          <div class="ra-cell">
+            <div class="lbl">Crédito IRPJ Apurado</div>
+            <div class="val">R$ ${fmtMoneyShort(r.creditoIRPJ)}</div>
+          </div>
+          <div class="ra-cell">
+            <div class="lbl">Crédito CSLL Apurado</div>
+            <div class="val">R$ ${fmtMoneyShort(r.creditoCSLL)}</div>
+          </div>
+        </div>
+        ${(r.restituirIRPJ>0 || r.restituirCSLL>0) ? `
+        <div class="ra-grid">
+          <div class="ra-cell" style="background:rgba(255,255,255,.22);border-color:rgba(255,255,255,.35)">
+            <div class="lbl" style="color:#FFFFFF">↩ IRPJ a Restituir / Compensar</div>
+            <div class="val" style="color:#FFFFFF">R$ ${fmtMoneyShort(r.restituirIRPJ)}</div>
+          </div>
+          <div class="ra-cell" style="background:rgba(255,255,255,.22);border-color:rgba(255,255,255,.35)">
+            <div class="lbl" style="color:#FFFFFF">↩ CSLL a Restituir / Compensar</div>
+            <div class="val" style="color:#FFFFFF">R$ ${fmtMoneyShort(r.restituirCSLL)}</div>
+          </div>
+        </div>
+        <div class="ra-foot">
+          <strong>Total a restituir/compensar: R$ ${fmtMoneyShort(r.restituirIRPJ + r.restituirCSLL)}</strong>.
+          O crédito apurado superou o IRPJ/CSLL devidos no 4º trimestre. A parcela excedente <strong>pode ser objeto de pedido de restituição ou compensação</strong> (IN 2306, art. 15, § 7º), acrescida da SELIC + 1% no mês da disponibilização (§ 8º).
+        </div>
+        ` : `
+        <div class="ra-foot">O crédito total de <strong>R$ ${fmtMoneyShort(totalCred)}</strong> foi integralmente deduzido do IRPJ e da CSLL devidos no 4º trimestre. Caso o crédito superasse o tributo devido, a parcela excedente poderia ser restituída ou compensada conforme § 7º da IN 2306.</div>
+        `}
+      </div>
+    `;
+  }
+
+  // CARDS PRINCIPAIS
+  html += `
+    <div class="result-grid">
+      <div class="result-card irpj">
+        <div class="lbl">IRPJ Devido${r.creditoIRPJ>0 ? ' (após crédito)' : ''}</div>
+        <div class="val"><span class="moeda">R$</span>${fmtMoneyShort(r.irpjDevido)}</div>
+      </div>
+      <div class="result-card">
+        <div class="lbl">CSLL Devida${r.creditoCSLL>0 ? ' (após crédito)' : ''}</div>
+        <div class="val"><span class="moeda">R$</span>${fmtMoneyShort(r.csllDevido)}</div>
+      </div>
+    </div>
+    <div class="result-total">
+      <div class="lbl">Total de Tributos do Trimestre (IRPJ + CSLL)</div>
+      <div class="val"><span class="moeda">R$</span>${fmtMoneyShort(r.totalTrim)}</div>
+    </div>
+  `;
+
+  // TABELA POR ATIVIDADE
+  html += `
+    <div class="breakdown">
+      <h4>1. Demonstrativo por Atividade</h4>
+      <table class="b-table">
+        <thead>
+          <tr>
+            <th>Atividade</th>
+            <th class="num">Receita Bruta</th>
+            <th class="num">% Presunção IRPJ</th>
+            <th class="num">Base IRPJ</th>
+            <th class="num">% Presunção CSLL</th>
+            <th class="num">Base CSLL</th>
+          </tr>
+        </thead>
+        <tbody>
+  `;
+  r.detalhePorAtividade.forEach(d=>{
+    html += `
+          <tr>
+            <td>${d.nome}<br/><span class="small-note">${d.ref}</span></td>
+            <td class="num">${fmtMoney(d.receita)}</td>
+            <td class="num">${d.exced>0 ? `${fmtPct(d.presIRPJ)} → <strong>${fmtPct(d.presIRPJacresc)}</strong>` : fmtPct(d.presIRPJ)}</td>
+            <td class="num">${fmtMoney(d.bIRPJn + d.bIRPJa)}</td>
+            <td class="num">${d.exced>0 ? `${fmtPct(d.presCSLL)} → <strong>${fmtPct(d.presCSLLacresc)}</strong>` : fmtPct(d.presCSLL)}</td>
+            <td class="num">${fmtMoney(d.bCSLLn + d.bCSLLa)}</td>
+          </tr>
+    `;
+  });
+  html += `
+          <tr class="total-row">
+            <td>TOTAL</td>
+            <td class="num">${fmtMoney(r.receitaBrutaTotal)}</td>
+            <td class="num">—</td>
+            <td class="num">${fmtMoney(r.baseIRPJ_normal + r.baseIRPJ_acrescimo)}</td>
+            <td class="num">—</td>
+            <td class="num">${fmtMoney(r.baseCSLL_normal + r.baseCSLL_acrescimo)}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  `;
+
+  // TABELA APURAÇÃO IRPJ
+  html += `
+    <div class="breakdown">
+      <h4>2. Apuração do IRPJ</h4>
+      <table class="b-table">
+        <tbody>
+          <tr><td>Base presumida (receita bruta × % presunção)</td><td class="num">${fmtMoney(r.baseIRPJ_normal + r.baseIRPJ_acrescimo)}</td></tr>
+          ${r.baseIRPJ_acrescimo>0 ? `<tr class="high-row"><td>↳ inclui acréscimo de 10% LC 224/25 sobre o excedente</td><td class="num">${fmtMoney(r.baseIRPJ_acrescimo)}</td></tr>`:''}
+          <tr><td>(+) Outras receitas e ganhos (art. 25, II, Lei 9.430/96)</td><td class="num">${fmtMoney(r.totalOutras)}</td></tr>
+          <tr class="total-row"><td><strong>Base de Cálculo do IRPJ</strong></td><td class="num">${fmtMoney(r.irpjBase)}</td></tr>
+          <tr><td>IRPJ — 15% sobre a base</td><td class="num">${fmtMoney(r.irpjPrincipal)}</td></tr>
+          <tr><td>IRPJ Adicional — 10% sobre (base – R$ 60.000,00 trimestrais)</td><td class="num">${fmtMoney(r.irpjAdicional)}</td></tr>
+          <tr><td><strong>IRPJ apurado no trimestre (antes do crédito)</strong></td><td class="num"><strong>${fmtMoney(r.irpjAntesCredito)}</strong></td></tr>
+          ${r.creditoIRPJ>0 ? `<tr class="credit-row"><td>(−) Crédito apurado no ajuste anual LC 224/25 (IN 2306, § 5º)</td><td class="num">−${fmtMoney(r.creditoIRPJ)}</td></tr>`:''}
+          ${r.restituirIRPJ>0 ? `<tr class="credit-row"><td>↩ Parcela do crédito que excedeu o IRPJ devido — passível de restituição/compensação</td><td class="num">${fmtMoney(r.restituirIRPJ)}</td></tr>`:''}
+          <tr class="total-row"><td><strong>IRPJ DEVIDO NO TRIMESTRE</strong></td><td class="num">${fmtMoney(r.irpjDevido)}</td></tr>
+        </tbody>
+      </table>
+    </div>
+  `;
+
+  // TABELA APURAÇÃO CSLL
+  html += `
+    <div class="breakdown">
+      <h4>3. Apuração da CSLL</h4>
+      <table class="b-table">
+        <tbody>
+          <tr><td>Base presumida (receita bruta × % presunção)</td><td class="num">${fmtMoney(r.baseCSLL_normal + r.baseCSLL_acrescimo)}</td></tr>
+          ${r.baseCSLL_acrescimo>0 ? `<tr class="high-row"><td>↳ inclui acréscimo de 10% LC 224/25 sobre o excedente</td><td class="num">${fmtMoney(r.baseCSLL_acrescimo)}</td></tr>`:''}
+          <tr><td>(+) Outras receitas e ganhos</td><td class="num">${fmtMoney(r.totalOutras)}</td></tr>
+          <tr class="total-row"><td><strong>Base de Cálculo da CSLL</strong></td><td class="num">${fmtMoney(r.csllBase)}</td></tr>
+          <tr><td>CSLL — 9% sobre a base</td><td class="num">${fmtMoney(r.csllBase * ALIQ_CSLL)}</td></tr>
+          <tr><td><strong>CSLL apurada no trimestre (antes do crédito)</strong></td><td class="num"><strong>${fmtMoney(r.csllAntesCredito)}</strong></td></tr>
+          ${r.creditoCSLL>0 ? `<tr class="credit-row"><td>(−) Crédito apurado no ajuste anual LC 224/25 (IN 2306, § 5º)</td><td class="num">−${fmtMoney(r.creditoCSLL)}</td></tr>`:''}
+          ${r.restituirCSLL>0 ? `<tr class="credit-row"><td>↩ Parcela do crédito que excedeu a CSLL devida — passível de restituição/compensação</td><td class="num">${fmtMoney(r.restituirCSLL)}</td></tr>`:''}
+          <tr class="total-row"><td><strong>CSLL DEVIDA NO TRIMESTRE</strong></td><td class="num">${fmtMoney(r.csllDevido)}</td></tr>
+        </tbody>
+      </table>
+    </div>
+  `;
+
+  // EXPLICAÇÃO GERAL
+  html += `
+    <div class="explanation">
+      <h4><span class="icn">i</span> Como chegamos a esse número — Memorial Descritivo</h4>
+      <p><strong>Apuração trimestral</strong> conforme art. 25 da Lei 9.430/96, com base presumida obtida pela aplicação dos percentuais do art. 15 da Lei 9.249/95 sobre a receita bruta de cada atividade do ${r.trimestre}º trimestre/2026.</p>
+      <span class="calc-line">Receita Bruta Total do Trimestre = ${fmtMoney(r.receitaBrutaTotal)}</span>
+      <span class="calc-line">Base de Cálculo IRPJ = Σ (Receita por atividade × % presunção) + Outras Receitas = ${fmtMoney(r.irpjBase)}</span>
+      <span class="calc-line">IRPJ = (Base × 15%) + (excedente acima de R$ 60.000,00 × 10%) = ${fmtMoney(r.irpjPrincipal)} + ${fmtMoney(r.irpjAdicional)} = ${fmtMoney(r.irpjAntesCredito)}</span>
+      <span class="calc-line">Base de Cálculo CSLL = Σ (Receita por atividade × % presunção) + Outras Receitas = ${fmtMoney(r.csllBase)}</span>
+      <span class="calc-line">CSLL = Base × 9% = ${fmtMoney(r.csllBase * ALIQ_CSLL)}</span>
+      <p>O adicional do IRPJ de 10% incide sobre a parcela da base que ultrapassa <strong>R$ 60.000,00</strong> por trimestre (R$ 240.000,00 anuais — § 1º do art. 3º da Lei 9.249/95).</p>
+      <p>As "outras receitas e ganhos" (ganhos de capital, rendimentos financeiros, locação não-objeto-social, juros SELIC, variações monetárias e demais resultados positivos) são adicionadas <strong>integralmente</strong> à base, sem aplicação do percentual de presunção, nos termos do inciso II do art. 25 da Lei 9.430/96.</p>
+    </div>
+  `;
+
+  // EXPLICAÇÃO LC 224/25
+  if(r.lc224Ativada){
+    html += `
+      <div class="explanation lc224-active">
+        <span class="lc224-tag">⚡ Adicional LC 224/25 — ATIVADO</span>
+        <h4><span class="icn">+</span> Inteligência do Cálculo do Adicional LC 224/25</h4>
+        <p>O adicional foi ativado neste trimestre. Conforme art. 4º, § 4º, VII c/c § 5º da <strong>LC 224/25</strong> e arts. 14 e 15 da <strong>IN RFB 2.306/2026</strong>, foi aplicado um acréscimo de <strong>10% sobre os percentuais de presunção</strong> incidentes sobre a parcela da receita bruta que excedeu o limite proporcional trimestral.</p>
+        <ul>
+          <li><strong>Limite proporcional trimestral:</strong> R$ 1.250.000,00 (1/4 de R$ 5.000.000,00 anuais — IN 2306, art. 15, § 2º)${r.trimestre>1 && r.folgaAnterior>0 ? ` <em>+ folga acumulada de trimestres anteriores de ${fmtMoney(r.folgaAnterior)} (IN 2306, § 4º)</em>` : ''}.</li>
+          <li><strong>Limite efetivamente aplicado neste trimestre:</strong> ${fmtMoney(r.limiteTrimestral)}.</li>
+          <li><strong>Receita bruta total do trimestre:</strong> ${fmtMoney(r.receitaBrutaTotal)}.</li>
+          <li><strong>Parcela excedente sujeita ao acréscimo:</strong> ${fmtMoney(r.parcelaExcedenteTrim)} (rateada proporcionalmente entre as atividades — § 1º, II).</li>
+        </ul>
+        <p><strong>Mecânica aplicada:</strong> para cada atividade, o percentual de presunção foi acrescido em 10%, aplicando-se o percentual majorado <em>somente</em> sobre a parcela excedente, e o percentual original sobre a parcela não excedente.</p>
+        <span class="calc-line">Ex.: presunção IRPJ 32% → percentual majorado = 32% × 1,10 = 35,2%</span>
+        <span class="calc-line">Base IRPJ acrescida = parcela excedente × 35,2% (somada à parcela normal × 32%)</span>
+        <p><strong>Acréscimo total da base do trimestre — IRPJ:</strong> ${fmtMoney(r.baseIRPJ_acrescimo)} · <strong>CSLL:</strong> ${fmtMoney(r.baseCSLL_acrescimo)}.</p>
+        ${r.ajusteQ4 ? renderAjusteQ4(r) : ''}
+      </div>
+    `;
+  } else if(r.trimestre===4 && r.ajusteQ4){
+    // Q4 sem acréscimo no próprio trimestre, mas com ajuste retroativo
+    html += `
+      <div class="explanation lc224-active">
+        <span class="lc224-tag">⚙ Ajuste Anual LC 224/25 — ${r.ajusteQ4.hipotese}</span>
+        <h4><span class="icn">Q4</span> Ajuste do Adicional LC 224/25 no encerramento do ano-calendário</h4>
+        <p>No 4º trimestre não houve aplicação do acréscimo de 10% sobre o próprio trimestre, porém o ajuste anual da LC 224/25 foi disparado (IN 2306, art. 15, § 5º).</p>
+        ${renderAjusteQ4(r)}
+      </div>
+    `;
+  } else {
+    html += `
+      <div class="explanation lc224-inactive">
+        <span class="lc224-tag off">✓ Adicional LC 224/25 — NÃO ATIVADO</span>
+        <h4><span class="icn">✓</span> Análise da LC 224/25 neste trimestre</h4>
+        <p>O adicional <strong>não foi ativado</strong>, pois a receita bruta total do trimestre (${fmtMoney(r.receitaBrutaTotal)}) <strong>não ultrapassou</strong> o limite proporcional de <strong>${fmtMoney(r.limiteTrimestral)}</strong> (1/4 de R$ 5.000.000,00 anuais${r.trimestre>1 && r.folgaAnterior>0 ? ' acrescido da folga de trimestres anteriores' : ''}).</p>
+        ${r.folgaGeradaTrim>0 ? `<p><strong>Folga gerada neste trimestre:</strong> ${fmtMoney(r.folgaGeradaTrim)}. Conforme IN 2306, art. 15, § 4º, essa diferença <em>pode ser considerada</em> para fins de apuração do limite aplicável aos trimestres subsequentes do mesmo ano-calendário.</p>` : ''}
+        <p>Os percentuais de presunção previstos no art. 15 da Lei 9.249/95 foram aplicados em seus valores originais, sem o acréscimo de 10% previsto na LC 224/25.</p>
+      </div>
+    `;
+  }
+
+  body.innerHTML = html;
+}
+
+function renderAjusteQ4(r){
+  const a = r.ajusteQ4;
+  let h = `
+    <h4 style="margin-top:18px"><span class="icn">Q4</span> Ajuste Anual do 4º Trimestre — IN 2306, art. 15, § 5º</h4>
+    <ul>
+      <li><strong>Receita bruta acumulada do ano-calendário:</strong> ${fmtMoney(a.rbAcumAno)}.</li>
+      <li><strong>Limite anual efetivo:</strong> ${fmtMoney(a.limiteAnualEfetivo)}${r.trimAtivos<4 ? ` (proporcional a ${r.trimAtivos} trimestre(s) em atividade — § 9º)` : ''}.</li>
+      <li><strong>Somatório das parcelas excedentes dos trimestres anteriores:</strong> ${fmtMoney(a.somatorioExcedAnteriores)}.</li>
+      <li><strong>Parcela excedente do ano:</strong> ${fmtMoney(a.parcelaExcedAno || 0)}.</li>
+      <li><strong>Hipótese aplicada:</strong> ${a.descricao}.</li>
+    </ul>
+  `;
+  if(a.hipotese === 'I'){
+    h += `<p>Como a receita bruta acumulada do ano foi <strong>inferior</strong> ao limite anual, o acréscimo de 10% não incide no 4º trimestre e os trimestres anteriores que aplicaram o acréscimo foram <strong>recalculados sem o acréscimo</strong>. A diferença foi computada como <strong>crédito a ser deduzido</strong> do IRPJ e da CSLL devidos no 4º trimestre.</p>`;
+  } else if(a.hipotese === 'II'){
+    h += `<p>Como o excedente anual (${fmtMoney(a.parcelaExcedAno)}) foi <strong>inferior</strong> ao somatório das parcelas excedentes dos trimestres anteriores (${fmtMoney(a.somatorioExcedAnteriores)}), os trimestres anteriores foram <strong>recalculados proporcionalmente</strong>: para cada trimestre i, novoExced_i = (excedOriginal_i / Σ excedOriginais) × excedAno. A diferença em relação aos valores efetivamente apurados foi reconhecida como <strong>crédito a deduzir</strong>.</p>`;
+  } else if(a.hipotese === 'III'){
+    h += `<p>Como o excedente anual (${fmtMoney(a.parcelaExcedAno)}) foi <strong>superior</strong> ao somatório dos excedentes dos trimestres anteriores, a parcela excedente do Q4 foi <strong>limitada</strong> à diferença (${fmtMoney(a.excedLimitado)}), evitando duplicidade no cálculo do adicional sobre o mesmo ano-calendário.</p>`;
+  }
+  // Detalhamento por trimestre recalculado
+  if(a.recalc && a.recalc.detalhes && a.recalc.detalhes.length>0){
+    h += `
+      <table class="b-table" style="margin-top:12px">
+        <thead><tr><th>Trim.</th><th class="num">Exced. Original</th><th class="num">Exced. Recalc.</th><th class="num">IRPJ Original</th><th class="num">IRPJ Recalc.</th><th class="num">Crédito IRPJ</th><th class="num">Crédito CSLL</th></tr></thead>
+        <tbody>
+    `;
+    a.recalc.detalhes.forEach(d=>{
+      h += `
+        <tr>
+          <td><strong>${d.t}º</strong></td>
+          <td class="num">${fmtMoney(d.excedOriginal)}</td>
+          <td class="num">${fmtMoney(d.excedRecalculado)}</td>
+          <td class="num">${fmtMoney(d.irpjOriginal)}</td>
+          <td class="num">${fmtMoney(d.irpjRecalculado)}</td>
+          <td class="num">${fmtMoney(d.diffIRPJ)}</td>
+          <td class="num">${fmtMoney(d.diffCSLL)}</td>
+        </tr>
+      `;
+    });
+    h += `
+        <tr class="credit-row">
+          <td colspan="5"><strong>TOTAL CRÉDITO APURADO</strong></td>
+          <td class="num">${fmtMoney(a.recalc.creditoIRPJ)}</td>
+          <td class="num">${fmtMoney(a.recalc.creditoCSLL)}</td>
+        </tr>
+        </tbody>
+      </table>
+    `;
+  }
+  if(r.creditoIRPJ>0 || r.creditoCSLL>0){
+    h += `<p><strong>Crédito a deduzir do IRPJ:</strong> ${fmtMoney(r.creditoIRPJ)} · <strong>Crédito a deduzir da CSLL:</strong> ${fmtMoney(r.creditoCSLL)}.</p>`;
+    if(r.restituirIRPJ>0 || r.restituirCSLL>0){
+      h += `<p><strong>A parcela do crédito que superou o tributo devido pode ser objeto de pedido de restituição ou compensação</strong> (IN 2306, § 7º), acrescida da SELIC + 1% no mês da disponibilização (§ 8º). Total a restituir/compensar: <strong>IRPJ ${fmtMoney(r.restituirIRPJ)}</strong> · <strong>CSLL ${fmtMoney(r.restituirCSLL)}</strong>.</p>`;
+    }
+  }
+  return h;
+}
+
+/* ============ SALVAR APURAÇÃO ============ */
+document.getElementById('btnSalvarApuracao').addEventListener('click', ()=>{
+  if(!state.lastResult){ alert('Não há resultado para salvar. Realize o cálculo primeiro.'); return; }
+  const t = state.lastResult.trimestre;
+  setSaved(t, state.lastResult);
+  alert(`Apuração do ${t}º trimestre salva com sucesso!`);
+  showDashboard();
+});
+
+/* ============ INICIALIZAÇÃO ============ */
+showDashboard();
+</script>
+</body>
+</html>
