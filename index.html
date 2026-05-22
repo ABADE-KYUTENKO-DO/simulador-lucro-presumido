@@ -263,6 +263,22 @@
       .result-total .val{font-size:1.8rem}
       .restitution-alert .ra-grid{grid-template-columns:1fr}
       .dash-grid{grid-template-columns:1fr}
+
+      /* Ajustes mobile solicitados */
+      .brand-logo{width:118px;height:30px}
+      .brand-logo.foot{width:126px;height:34px}
+      .brand-divider{display:none}
+      .brand{gap:10px}
+      .brand-txt h1{font-size:.92rem}
+      .brand-txt p{font-size:.58rem;letter-spacing:.08em}
+      #btnExportar{display:none!important}
+    }
+
+    @media (max-width:480px){
+      .brand-logo{width:104px;height:28px}
+      .brand-logo.foot{width:112px;height:32px}
+      header{padding:18px 0}
+      footer{padding:24px 0}
     }
 
     .hidden{display:none!important}
@@ -836,7 +852,14 @@ function showStep(n){
   const total = 5;
   const pct = ((n-1)/total)*100;
   document.getElementById('progressFill').style.width = `calc((100% - 36px) * ${pct/100})`;
-  window.scrollTo({top:0, behavior:'smooth'});
+
+  /* Rolagem ajustada: ao avançar, a tela não sobe mais até o topo da página.
+     Ela sobe apenas até o card da etapa atual, mantendo a navegação mais confortável no mobile. */
+  const currentCard = document.getElementById('step' + n);
+  if(currentCard){
+    const targetTop = currentCard.getBoundingClientRect().top + window.scrollY - 16;
+    window.scrollTo({top: Math.max(0, targetTop), behavior:'smooth'});
+  }
 }
 
 /* ============ STEP 1 ============ */
