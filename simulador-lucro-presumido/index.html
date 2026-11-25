@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Simulador Profissional Lucro Presumido 2026 | TAX ACCOUNTING</title>
+  <title>Simulador Profissional Lucro Presumido 2027 | TAX ACCOUNTING</title>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
   <style>
     /* ════════════════════════════════════════════════════════════
@@ -279,11 +279,11 @@
         <div class="brand-logo" role="img" aria-label="Tax Accounting"></div>
         <div class="brand-divider"></div>
         <div class="brand-txt">
-          <h1>Simulador Lucro Presumido 2026</h1>
-          <p>IRPJ · CSLL · Adicional LC 224/25</p>
+          <h1>Simulador Lucro Presumido 2027</h1>
+          <p>IRPJ · CSLL · Adicional LC 224/25 (LC 239/26)</p>
         </div>
       </div>
-      <div class="header-badge">Ano-Calendário 2026</div>
+      <div class="header-badge">Ano-Calendário 2027</div>
     </div>
   </header>
 
@@ -292,13 +292,14 @@
 
       <div class="intro">
         <h2>Apuração de <span>IRPJ e CSLL</span> no Regime do Lucro Presumido</h2>
-        <p>Simulador trimestral conforme Lei 9.430/96, Lei 9.249/95, LC 224/25 e Instruções Normativas RFB 2.305 e 2.306/2026. Salve cada trimestre e reutilize os dados nos cálculos subsequentes.</p>
+        <p>Simulador trimestral conforme Lei 9.430/96, Lei 9.249/95, LC 224/25 (LC 239/26) e Instruções Normativas RFB 2.305 e 2.306/2026. Salve cada trimestre e reutilize os dados nos cálculos subsequentes.</p>
+        <p><strong>Atenção:</strong> esta versão aplica a majoração de 20% uniformemente ao IRPJ e à CSLL. Conforme o art. 15 da LC 239/2026, os efeitos começam em 01/01/2027 para o IRPJ e em 01/03/2027 para a CSLL. A simulação não contempla a transição da CSLL no primeiro trimestre de 2027. Não utilize apurações salvas de 2026 nos cálculos de 2027.</p>
       </div>
 
       <!-- DASHBOARD DAS APURAÇÕES SALVAS -->
       <div class="dashboard" id="dashboard">
         <div class="dash-head">
-          <h3><span class="ico">★</span> Apurações Salvas — Ano-Calendário 2026</h3>
+          <h3><span class="ico">★</span> Apurações Salvas — Ano-Calendário 2027</h3>
           <div style="display:flex;gap:8px">
             <button class="btn btn-ghost btn-sm" id="btnExportar">Exportar em Excel</button>
             <button class="btn btn-ghost btn-sm" id="btnLimparTudo" style="color:var(--danger);border-color:#FAD1CF">✕ Limpar Tudo</button>
@@ -321,7 +322,7 @@
           <div class="step-wrap"><div class="step-dot" data-s="2">2</div><div class="step-label">Atividades</div></div>
           <div class="step-wrap"><div class="step-dot" data-s="3">3</div><div class="step-label">Receitas</div></div>
           <div class="step-wrap"><div class="step-dot" data-s="4">4</div><div class="step-label">Outras Receitas</div></div>
-          <div class="step-wrap"><div class="step-dot" data-s="5">5</div><div class="step-label">LC 224/25</div></div>
+          <div class="step-wrap"><div class="step-dot" data-s="5">5</div><div class="step-label">LC 224/25 (LC 239/26)</div></div>
           <div class="step-wrap"><div class="step-dot" data-s="6">6</div><div class="step-label">Resultado</div></div>
         </div>
       </div>
@@ -331,7 +332,7 @@
         <div class="card-head">
           <span class="step-tag">Etapa 1 de 6</span>
           <h3>Qual é o trimestre da apuração?</h3>
-          <p>O Lucro Presumido tem apuração trimestral (Lei 9.430/96, art. 25). Selecione o trimestre do ano-calendário 2026 que deseja calcular. Trimestres já salvos aparecem marcados com ✓.</p>
+          <p>O Lucro Presumido tem apuração trimestral (Lei 9.430/96, art. 25). Selecione o trimestre do ano-calendário 2027 que deseja calcular. Trimestres já salvos aparecem marcados com ✓.</p>
         </div>
         <div class="card-body">
           <div class="field">
@@ -438,18 +439,18 @@
         </div>
       </div>
 
-      <!-- STEP 5: LC 224/25 -->
+      <!-- STEP 5: LC 224/25 (LC 239/26) -->
       <div class="card hidden" id="step5">
         <div class="card-head">
           <span class="step-tag">Etapa 5 de 6</span>
-          <h3>Ajustes do Adicional LC 224/25</h3>
-          <p>A LC 224/25 acresce 10% aos percentuais de presunção quando a receita bruta supera o limite proporcional trimestral de R$ 1.250.000,00, sob as regras das INs RFB 2.305/25 e 2.306/26.</p>
+          <h3>Ajustes do Adicional LC 224/25 (LC 239/26)</h3>
+          <p>A LC 224/25, com redação dada pelo art. 4º da LC 239/26, acresce 20% aos percentuais de presunção quando a receita bruta supera o limite proporcional trimestral de R$ 1.250.000,00, sob as regras das INs RFB 2.305/25 e 2.306/26.</p>
         </div>
         <div class="card-body" id="lcBody">
           <div id="lcAutoBannerArea"></div>
 
           <div class="info-banner" id="lcInfoBanner">
-            <strong>Limite proporcional trimestral:</strong> R$ 1.250.000,00 (1/4 de R$ 5.000.000,00 anuais). Caso a receita bruta do trimestre exceda esse valor, o adicional de 10% incidirá sobre a parcela excedente.
+            <strong>Limite proporcional trimestral:</strong> R$ 1.250.000,00 (1/4 de R$ 5.000.000,00 anuais). Caso a receita bruta do trimestre exceda esse valor, o adicional de 20% incidirá sobre a parcela excedente.
           </div>
 
           <div id="lcSubsequenteWrap" class="hidden">
@@ -479,7 +480,7 @@
           </div>
 
           <div class="field">
-            <label class="field-label">A empresa iniciou ou encerrou atividades no curso de 2026?</label>
+            <label class="field-label">A empresa iniciou ou encerrou atividades no curso de 2027?</label>
             <select class="select" id="inicioEncerramento">
               <option value="nao">Não — empresa ativa o ano inteiro</option>
               <option value="sim">Sim — atividade parcial</option>
@@ -507,7 +508,7 @@
         <div class="card-head">
           <span class="step-tag">Resultado da Apuração</span>
           <h3 id="resultTitle">Apuração do Lucro Presumido — Trimestre</h3>
-          <p id="resultSub">Cálculo de IRPJ e CSLL conforme legislação vigente em 2026.</p>
+          <p id="resultSub">Cálculo de IRPJ e CSLL conforme legislação vigente em 2027.</p>
         </div>
         <div class="card-body" id="resultBody">
           <!-- preenchido via JS -->
@@ -535,7 +536,7 @@
         </div>
       </div>
       <div class="foot-meta">
-        © 2026 · Apuração conforme Lei 9.430/96, Lei 9.249/95, LC 224/25,<br/>
+        © 2027 · Apuração conforme Lei 9.430/96, Lei 9.249/95, LC 224/25 (LC 239/26),<br/>
         Instruções Normativas RFB 2.305/2025 e 2.306/2026
       </div>
     </div>
@@ -980,7 +981,7 @@ document.getElementById('btnNext4').addEventListener('click', ()=>{
   showStep(5);
 });
 
-/* ============ STEP 5 — LC 224/25 ============ */
+/* ============ STEP 5 — LC 224/25 (LC 239/26) ============ */
 function prepareLCStep(){
   document.getElementById('lcSubsequenteWrap').classList.toggle('hidden', state.trimestre===1);
   document.getElementById('lcQ4Wrap').classList.toggle('hidden', state.trimestre!==4);
@@ -1070,7 +1071,7 @@ document.getElementById('btnNovaApuracao').addEventListener('click', ()=>{
   startNewApuracao();
 });
 document.getElementById('btnLimparTudo').addEventListener('click', ()=>{
-  if(confirm('Limpar TODAS as apurações salvas de 2026? Esta ação não pode ser desfeita.')){
+  if(confirm('Limpar TODAS as apurações salvas de 2027? Esta ação não pode ser desfeita.')){
     clearAllSaved();
     renderDashboard();
   }
@@ -1131,7 +1132,7 @@ function exportarExcel(){
     <html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40">
     <head>
       <meta charset="UTF-8">
-      <!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>Apurações 2026</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]-->
+      <!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>Apurações 2027</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]-->
       <style>
         body{font-family:Arial, sans-serif;}
         h1{color:#0D1A6B;font-size:20px;}
@@ -1143,14 +1144,14 @@ function exportarExcel(){
       </style>
     </head>
     <body>
-      <h1>Relatório de Apurações - Lucro Presumido 2026</h1>
-      <p>Arquivo gerado pelo Simulador Lucro Presumido 2026.</p>
+      <h1>Relatório de Apurações - Lucro Presumido 2027</h1>
+      <p>Arquivo gerado pelo Simulador Lucro Presumido 2027.</p>
 
       <h2>Resumo por trimestre</h2>
       <table>
         <thead>
           <tr>
-            <th>Trimestre</th><th>Empresa</th><th>Receita Bruta</th><th>Outras Receitas</th><th>Base IRPJ</th><th>IRPJ Devido</th><th>Base CSLL</th><th>CSLL Devida</th><th>Total</th><th>LC 224/25</th><th>Excedente LC 224/25</th>
+            <th>Trimestre</th><th>Empresa</th><th>Receita Bruta</th><th>Outras Receitas</th><th>Base IRPJ</th><th>IRPJ Devido</th><th>Base CSLL</th><th>CSLL Devida</th><th>Total</th><th>LC 224/25 (LC 239/26)</th><th>Excedente LC 224/25 (LC 239/26)</th>
           </tr>
         </thead>
         <tbody>
@@ -1173,7 +1174,7 @@ function exportarExcel(){
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = 'apuracoes-lucro-presumido-2026.xls';
+  a.download = 'apuracoes-lucro-presumido-2027.xls';
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
@@ -1409,7 +1410,7 @@ function recalcularTrimsAnteriores(opts, all){
 
 /* ============ RENDER RESULTADO ============ */
 function renderResultado(r){
-  const trimLbl = `${r.trimestre}º Trimestre / 2026`;
+  const trimLbl = `${r.trimestre}º Trimestre / 2027`;
   document.getElementById('resultTitle').textContent = `Apuração do Lucro Presumido — ${trimLbl}${r.razao ? ' · ' + r.razao : ''}`;
   document.getElementById('resultSub').textContent = `Receita Bruta total do trimestre: ${fmtMoney(r.receitaBrutaTotal)} · Outras receitas: ${fmtMoney(r.totalOutras)}`;
 
@@ -1422,9 +1423,9 @@ function renderResultado(r){
     const totalRest = r.restituirIRPJ + r.restituirCSLL;
     html += `
       <div class="restitution-alert">
-        <span class="ra-tag">✦ Crédito Apurado · LC 224/25</span>
-        <h4>Foi apurado crédito a favor da empresa no ajuste anual da LC 224/25</h4>
-        <p>Conforme IN RFB 2.306/2026, art. 15, § 5º, o adicional de 10% nos percentuais de presunção <strong>aplicado em trimestres anteriores não se confirmou</strong> ao final do ano-calendário (hipótese ${r.ajusteQ4?.hipotese || '—'}). Os valores foram <strong>recalculados</strong> e a diferença gera crédito a deduzir do IRPJ e da CSLL do 4º trimestre.</p>
+        <span class="ra-tag">✦ Crédito Apurado · LC 224/25 (LC 239/26)</span>
+        <h4>Foi apurado crédito a favor da empresa no ajuste anual da LC 224/25 (LC 239/26)</h4>
+        <p>Conforme IN RFB 2.306/2026, art. 15, § 5º, o adicional de 20% nos percentuais de presunção <strong>aplicado em trimestres anteriores não se confirmou</strong> ao final do ano-calendário (hipótese ${r.ajusteQ4?.hipotese || '—'}). Os valores foram <strong>recalculados</strong> e a diferença gera crédito a deduzir do IRPJ e da CSLL do 4º trimestre.</p>
         <div class="ra-grid">
           <div class="ra-cell">
             <div class="lbl">Crédito IRPJ Apurado</div>
@@ -1525,13 +1526,13 @@ function renderResultado(r){
       <table class="b-table">
         <tbody>
           <tr><td>Base presumida (receita bruta × % presunção)</td><td class="num">${fmtMoney(r.baseIRPJ_normal + r.baseIRPJ_acrescimo)}</td></tr>
-          ${r.baseIRPJ_acrescimo>0 ? `<tr class="high-row"><td>↳ inclui acréscimo de 10% LC 224/25 sobre o excedente</td><td class="num">${fmtMoney(r.baseIRPJ_acrescimo)}</td></tr>`:''}
+          ${r.baseIRPJ_acrescimo>0 ? `<tr class="high-row"><td>↳ inclui acréscimo de 20% LC 224/25 (LC 239/26) sobre o excedente</td><td class="num">${fmtMoney(r.baseIRPJ_acrescimo)}</td></tr>`:''}
           <tr><td>(+) Outras receitas e ganhos (art. 25, II, Lei 9.430/96)</td><td class="num">${fmtMoney(r.totalOutras)}</td></tr>
           <tr class="total-row"><td><strong>Base de Cálculo do IRPJ</strong></td><td class="num">${fmtMoney(r.irpjBase)}</td></tr>
           <tr><td>IRPJ — 15% sobre a base</td><td class="num">${fmtMoney(r.irpjPrincipal)}</td></tr>
           <tr><td>IRPJ Adicional — 10% sobre (base – R$ 60.000,00 trimestrais)</td><td class="num">${fmtMoney(r.irpjAdicional)}</td></tr>
           <tr><td><strong>IRPJ apurado no trimestre (antes do crédito)</strong></td><td class="num"><strong>${fmtMoney(r.irpjAntesCredito)}</strong></td></tr>
-          ${r.creditoIRPJ>0 ? `<tr class="credit-row"><td>(−) Crédito apurado no ajuste anual LC 224/25 (IN 2306, § 5º)</td><td class="num">−${fmtMoney(r.creditoIRPJ)}</td></tr>`:''}
+          ${r.creditoIRPJ>0 ? `<tr class="credit-row"><td>(−) Crédito apurado no ajuste anual LC 224/25 (LC 239/26) (IN 2306, § 5º)</td><td class="num">−${fmtMoney(r.creditoIRPJ)}</td></tr>`:''}
           ${r.restituirIRPJ>0 ? `<tr class="credit-row"><td>↩ Parcela do crédito que excedeu o IRPJ devido — passível de restituição/compensação</td><td class="num">${fmtMoney(r.restituirIRPJ)}</td></tr>`:''}
           <tr class="total-row"><td><strong>IRPJ DEVIDO NO TRIMESTRE</strong></td><td class="num">${fmtMoney(r.irpjDevido)}</td></tr>
         </tbody>
@@ -1546,12 +1547,12 @@ function renderResultado(r){
       <table class="b-table">
         <tbody>
           <tr><td>Base presumida (receita bruta × % presunção)</td><td class="num">${fmtMoney(r.baseCSLL_normal + r.baseCSLL_acrescimo)}</td></tr>
-          ${r.baseCSLL_acrescimo>0 ? `<tr class="high-row"><td>↳ inclui acréscimo de 10% LC 224/25 sobre o excedente</td><td class="num">${fmtMoney(r.baseCSLL_acrescimo)}</td></tr>`:''}
+          ${r.baseCSLL_acrescimo>0 ? `<tr class="high-row"><td>↳ inclui acréscimo de 20% LC 224/25 (LC 239/26) sobre o excedente</td><td class="num">${fmtMoney(r.baseCSLL_acrescimo)}</td></tr>`:''}
           <tr><td>(+) Outras receitas e ganhos</td><td class="num">${fmtMoney(r.totalOutras)}</td></tr>
           <tr class="total-row"><td><strong>Base de Cálculo da CSLL</strong></td><td class="num">${fmtMoney(r.csllBase)}</td></tr>
           <tr><td>CSLL — 9% sobre a base</td><td class="num">${fmtMoney(r.csllBase * ALIQ_CSLL)}</td></tr>
           <tr><td><strong>CSLL apurada no trimestre (antes do crédito)</strong></td><td class="num"><strong>${fmtMoney(r.csllAntesCredito)}</strong></td></tr>
-          ${r.creditoCSLL>0 ? `<tr class="credit-row"><td>(−) Crédito apurado no ajuste anual LC 224/25 (IN 2306, § 5º)</td><td class="num">−${fmtMoney(r.creditoCSLL)}</td></tr>`:''}
+          ${r.creditoCSLL>0 ? `<tr class="credit-row"><td>(−) Crédito apurado no ajuste anual LC 224/25 (LC 239/26) (IN 2306, § 5º)</td><td class="num">−${fmtMoney(r.creditoCSLL)}</td></tr>`:''}
           ${r.restituirCSLL>0 ? `<tr class="credit-row"><td>↩ Parcela do crédito que excedeu a CSLL devida — passível de restituição/compensação</td><td class="num">${fmtMoney(r.restituirCSLL)}</td></tr>`:''}
           <tr class="total-row"><td><strong>CSLL DEVIDA NO TRIMESTRE</strong></td><td class="num">${fmtMoney(r.csllDevido)}</td></tr>
         </tbody>
@@ -1563,7 +1564,7 @@ function renderResultado(r){
   html += `
     <div class="explanation">
       <h4><span class="icn">i</span> Como chegamos a esse número — Memorial Descritivo</h4>
-      <p><strong>Apuração trimestral</strong> conforme art. 25 da Lei 9.430/96, com base presumida obtida pela aplicação dos percentuais do art. 15 da Lei 9.249/95 sobre a receita bruta de cada atividade do ${r.trimestre}º trimestre/2026.</p>
+      <p><strong>Apuração trimestral</strong> conforme art. 25 da Lei 9.430/96, com base presumida obtida pela aplicação dos percentuais do art. 15 da Lei 9.249/95 sobre a receita bruta de cada atividade do ${r.trimestre}º trimestre/2027.</p>
       <span class="calc-line">Receita Bruta Total do Trimestre = ${fmtMoney(r.receitaBrutaTotal)}</span>
       <span class="calc-line">Base de Cálculo IRPJ = Σ (Receita por atividade × % presunção) + Outras Receitas = ${fmtMoney(r.irpjBase)}</span>
       <span class="calc-line">IRPJ = (Base × 15%) + (excedente acima de R$ 60.000,00 × 10%) = ${fmtMoney(r.irpjPrincipal)} + ${fmtMoney(r.irpjAdicional)} = ${fmtMoney(r.irpjAntesCredito)}</span>
@@ -1574,22 +1575,22 @@ function renderResultado(r){
     </div>
   `;
 
-  // EXPLICAÇÃO LC 224/25
+  // EXPLICAÇÃO LC 224/25 (LC 239/26)
   if(r.lc224Ativada){
     html += `
       <div class="explanation lc224-active">
-        <span class="lc224-tag">⚡ Adicional LC 224/25 — ATIVADO</span>
-        <h4><span class="icn">+</span> Inteligência do Cálculo do Adicional LC 224/25</h4>
-        <p>O adicional foi ativado neste trimestre. Conforme art. 4º, § 4º, VII c/c § 5º da <strong>LC 224/25</strong> e arts. 14 e 15 da <strong>IN RFB 2.306/2026</strong>, foi aplicado um acréscimo de <strong>10% sobre os percentuais de presunção</strong> incidentes sobre a parcela da receita bruta que excedeu o limite proporcional trimestral.</p>
+        <span class="lc224-tag">⚡ Adicional LC 224/25 (LC 239/26) — ATIVADO</span>
+        <h4><span class="icn">+</span> Inteligência do Cálculo do Adicional LC 224/25 (LC 239/26)</h4>
+        <p>O adicional foi ativado neste trimestre. Conforme art. 4º, § 4º, VII c/c § 5º da <strong>LC 224/25</strong>, com redação dada pelo art. 4º da <strong>LC 239/26</strong>, e arts. 14 e 15 da <strong>IN RFB 2.306/2026</strong>, foi aplicado um acréscimo de <strong>20% sobre os percentuais de presunção</strong> incidentes sobre a parcela da receita bruta que excedeu o limite proporcional trimestral.</p>
         <ul>
           <li><strong>Limite proporcional trimestral:</strong> R$ 1.250.000,00 (1/4 de R$ 5.000.000,00 anuais — IN 2306, art. 15, § 2º)${r.trimestre>1 && r.folgaAnterior>0 ? ` <em>+ folga acumulada de trimestres anteriores de ${fmtMoney(r.folgaAnterior)} (IN 2306, § 4º)</em>` : ''}.</li>
           <li><strong>Limite efetivamente aplicado neste trimestre:</strong> ${fmtMoney(r.limiteTrimestral)}.</li>
           <li><strong>Receita bruta total do trimestre:</strong> ${fmtMoney(r.receitaBrutaTotal)}.</li>
           <li><strong>Parcela excedente sujeita ao acréscimo:</strong> ${fmtMoney(r.parcelaExcedenteTrim)} (rateada proporcionalmente entre as atividades — § 1º, II).</li>
         </ul>
-        <p><strong>Mecânica aplicada:</strong> para cada atividade, o percentual de presunção foi acrescido em 10%, aplicando-se o percentual majorado <em>somente</em> sobre a parcela excedente, e o percentual original sobre a parcela não excedente.</p>
-        <span class="calc-line">Ex.: presunção IRPJ 32% → percentual majorado = 32% × 1,10 = 35,2%</span>
-        <span class="calc-line">Base IRPJ acrescida = parcela excedente × 35,2% (somada à parcela normal × 32%)</span>
+        <p><strong>Mecânica aplicada:</strong> para cada atividade, o percentual de presunção foi acrescido em 20%, aplicando-se o percentual majorado <em>somente</em> sobre a parcela excedente, e o percentual original sobre a parcela não excedente.</p>
+        <span class="calc-line">Ex.: presunção IRPJ 32% → percentual majorado = 32% × 1,20 = 38,4%</span>
+        <span class="calc-line">Base IRPJ acrescida = parcela excedente × 38,4% (somada à parcela normal × 32%)</span>
         <p><strong>Acréscimo total da base do trimestre — IRPJ:</strong> ${fmtMoney(r.baseIRPJ_acrescimo)} · <strong>CSLL:</strong> ${fmtMoney(r.baseCSLL_acrescimo)}.</p>
         ${r.ajusteQ4 ? renderAjusteQ4(r) : ''}
       </div>
@@ -1598,20 +1599,20 @@ function renderResultado(r){
     // Q4 sem acréscimo no próprio trimestre, mas com ajuste retroativo
     html += `
       <div class="explanation lc224-active">
-        <span class="lc224-tag">⚙ Ajuste Anual LC 224/25 — ${r.ajusteQ4.hipotese}</span>
-        <h4><span class="icn">Q4</span> Ajuste do Adicional LC 224/25 no encerramento do ano-calendário</h4>
-        <p>No 4º trimestre não houve aplicação do acréscimo de 10% sobre o próprio trimestre, porém o ajuste anual da LC 224/25 foi disparado (IN 2306, art. 15, § 5º).</p>
+        <span class="lc224-tag">⚙ Ajuste Anual LC 224/25 (LC 239/26) — ${r.ajusteQ4.hipotese}</span>
+        <h4><span class="icn">Q4</span> Ajuste do Adicional LC 224/25 (LC 239/26) no encerramento do ano-calendário</h4>
+        <p>No 4º trimestre não houve aplicação do acréscimo de 20% sobre o próprio trimestre, porém o ajuste anual da LC 224/25 (LC 239/26) foi disparado (IN 2306, art. 15, § 5º).</p>
         ${renderAjusteQ4(r)}
       </div>
     `;
   } else {
     html += `
       <div class="explanation lc224-inactive">
-        <span class="lc224-tag off">✓ Adicional LC 224/25 — NÃO ATIVADO</span>
-        <h4><span class="icn">✓</span> Análise da LC 224/25 neste trimestre</h4>
+        <span class="lc224-tag off">✓ Adicional LC 224/25 (LC 239/26) — NÃO ATIVADO</span>
+        <h4><span class="icn">✓</span> Análise da LC 224/25 (LC 239/26) neste trimestre</h4>
         <p>O adicional <strong>não foi ativado</strong>, pois a receita bruta total do trimestre (${fmtMoney(r.receitaBrutaTotal)}) <strong>não ultrapassou</strong> o limite proporcional de <strong>${fmtMoney(r.limiteTrimestral)}</strong> (1/4 de R$ 5.000.000,00 anuais${r.trimestre>1 && r.folgaAnterior>0 ? ' acrescido da folga de trimestres anteriores' : ''}).</p>
         ${r.folgaGeradaTrim>0 ? `<p><strong>Folga gerada neste trimestre:</strong> ${fmtMoney(r.folgaGeradaTrim)}. Conforme IN 2306, art. 15, § 4º, essa diferença <em>pode ser considerada</em> para fins de apuração do limite aplicável aos trimestres subsequentes do mesmo ano-calendário.</p>` : ''}
-        <p>Os percentuais de presunção previstos no art. 15 da Lei 9.249/95 foram aplicados em seus valores originais, sem o acréscimo de 10% previsto na LC 224/25.</p>
+        <p>Os percentuais de presunção previstos no art. 15 da Lei 9.249/95 foram aplicados em seus valores originais, sem o acréscimo de 20% previsto na LC 224/25 (LC 239/26).</p>
       </div>
     `;
   }
@@ -1632,7 +1633,7 @@ function renderAjusteQ4(r){
     </ul>
   `;
   if(a.hipotese === 'I'){
-    h += `<p>Como a receita bruta acumulada do ano foi <strong>inferior</strong> ao limite anual, o acréscimo de 10% não incide no 4º trimestre e os trimestres anteriores que aplicaram o acréscimo foram <strong>recalculados sem o acréscimo</strong>. A diferença foi computada como <strong>crédito a ser deduzido</strong> do IRPJ e da CSLL devidos no 4º trimestre.</p>`;
+    h += `<p>Como a receita bruta acumulada do ano foi <strong>inferior</strong> ao limite anual, o acréscimo de 20% não incide no 4º trimestre e os trimestres anteriores que aplicaram o acréscimo foram <strong>recalculados sem o acréscimo</strong>. A diferença foi computada como <strong>crédito a ser deduzido</strong> do IRPJ e da CSLL devidos no 4º trimestre.</p>`;
   } else if(a.hipotese === 'II'){
     h += `<p>Como o excedente anual (${fmtMoney(a.parcelaExcedAno)}) foi <strong>inferior</strong> ao somatório das parcelas excedentes dos trimestres anteriores (${fmtMoney(a.somatorioExcedAnteriores)}), os trimestres anteriores foram <strong>recalculados proporcionalmente</strong>: para cada trimestre i, novoExced_i = (excedOriginal_i / Σ excedOriginais) × excedAno. A diferença em relação aos valores efetivamente apurados foi reconhecida como <strong>crédito a deduzir</strong>.</p>`;
   } else if(a.hipotese === 'III'){
