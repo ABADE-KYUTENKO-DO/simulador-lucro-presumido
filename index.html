@@ -308,7 +308,7 @@
 
       <div class="intro">
         <h2>Apuração de <span>IRPJ e CSLL</span> no Regime do Lucro Presumido</h2>
-        <p>Simulador trimestral conforme Lei 9.430/96, Lei 9.249/95, LC 224/25 e Instruções Normativas RFB 2.305 e 2.306/2026. Salve cada trimestre e reutilize os dados nos cálculos subsequentes.</p>
+        <p>Simulador trimestral conforme Lei 9.430/96, Lei 9.249/95, LC 224/25, LC 239/26 e Instruções Normativas RFB 2.305 e 2.306/2026. Salve cada trimestre e reutilize os dados nos cálculos subsequentes.</p>
       </div>
 
       <!-- DASHBOARD DAS APURAÇÕES SALVAS -->
@@ -459,13 +459,13 @@
         <div class="card-head">
           <span class="step-tag">Etapa 5 de 6</span>
           <h3>Ajustes do Adicional LC 224/25</h3>
-          <p>A LC 224/25 acresce 10% aos percentuais de presunção quando a receita bruta supera o limite proporcional trimestral de R$ 1.250.000,00, sob as regras das INs RFB 2.305/25 e 2.306/26.</p>
+          <p>A LC 224/25 acresce 20% aos percentuais de presunção quando a receita bruta supera o limite proporcional trimestral de R$ 1.250.000,00, sob as regras das INs RFB 2.305/25 e 2.306/26.</p>
         </div>
         <div class="card-body" id="lcBody">
           <div id="lcAutoBannerArea"></div>
 
           <div class="info-banner" id="lcInfoBanner">
-            <strong>Limite proporcional trimestral:</strong> R$ 1.250.000,00 (1/4 de R$ 5.000.000,00 anuais). Caso a receita bruta do trimestre exceda esse valor, o adicional de 10% incidirá sobre a parcela excedente.
+            <strong>Limite proporcional trimestral:</strong> R$ 1.250.000,00 (1/4 de R$ 5.000.000,00 anuais). Caso a receita bruta do trimestre exceda esse valor, a majoração de 20% incidirá sobre a parcela excedente.
           </div>
 
           <div id="lcSubsequenteWrap" class="hidden">
@@ -551,7 +551,7 @@
         </div>
       </div>
       <div class="foot-meta">
-        © 2026 · Apuração conforme Lei 9.430/96, Lei 9.249/95, LC 224/25,<br/>
+        © 2026 · Apuração conforme Lei 9.430/96, Lei 9.249/95, LC 224/25, LC 239/26<br/>
         Instruções Normativas RFB 2.305/2025 e 2.306/2026
       </div>
     </div>
@@ -580,7 +580,7 @@ const LIMITE_IRPJ_ADIC_TRIM = 60000;
 const ALIQ_CSLL = 0.09;
 const LIMITE_TRIM_LC224 = 1250000;
 const LIMITE_ANUAL_LC224 = 5000000;
-const ACRESCIMO_LC224 = 0.10;
+const ACRESCIMO_LC224 = 0.20;
 
 /* ============ PERSISTÊNCIA ============ */
 const STORAGE_KEY = 'tax_simulador_lp_2026';
@@ -1447,7 +1447,7 @@ function renderResultado(r){
       <div class="restitution-alert">
         <span class="ra-tag">✦ Crédito Apurado · LC 224/25</span>
         <h4>Foi apurado crédito a favor da empresa no ajuste anual da LC 224/25</h4>
-        <p>Conforme IN RFB 2.306/2026, art. 15, § 5º, o adicional de 10% nos percentuais de presunção <strong>aplicado em trimestres anteriores não se confirmou</strong> ao final do ano-calendário (hipótese ${r.ajusteQ4?.hipotese || '—'}). Os valores foram <strong>recalculados</strong> e a diferença gera crédito a deduzir do IRPJ e da CSLL do 4º trimestre.</p>
+        <p>Conforme IN RFB 2.306/2026, art. 15, § 5º, o acréscimo de 20% nos percentuais de presunção <strong>aplicado em trimestres anteriores não se confirmou</strong> ao final do ano-calendário (hipótese ${r.ajusteQ4?.hipotese || '—'}). Os valores foram <strong>recalculados</strong> e a diferença gera crédito a deduzir do IRPJ e da CSLL do 4º trimestre.</p>
         <div class="ra-grid">
           <div class="ra-cell">
             <div class="lbl">Crédito IRPJ Apurado</div>
@@ -1548,7 +1548,7 @@ function renderResultado(r){
       <table class="b-table">
         <tbody>
           <tr><td>Base presumida (receita bruta × % presunção)</td><td class="num">${fmtMoney(r.baseIRPJ_normal + r.baseIRPJ_acrescimo)}</td></tr>
-          ${r.baseIRPJ_acrescimo>0 ? `<tr class="high-row"><td>↳ inclui acréscimo de 10% LC 224/25 sobre o excedente</td><td class="num">${fmtMoney(r.baseIRPJ_acrescimo)}</td></tr>`:''}
+          ${r.baseIRPJ_acrescimo>0 ? `<tr class="high-row"><td>↳ inclui acréscimo de 20% LC 224/25 sobre o excedente</td><td class="num">${fmtMoney(r.baseIRPJ_acrescimo)}</td></tr>`:''}
           <tr><td>(+) Outras receitas e ganhos (art. 25, II, Lei 9.430/96)</td><td class="num">${fmtMoney(r.totalOutras)}</td></tr>
           <tr class="total-row"><td><strong>Base de Cálculo do IRPJ</strong></td><td class="num">${fmtMoney(r.irpjBase)}</td></tr>
           <tr><td>IRPJ — 15% sobre a base</td><td class="num">${fmtMoney(r.irpjPrincipal)}</td></tr>
@@ -1569,7 +1569,7 @@ function renderResultado(r){
       <table class="b-table">
         <tbody>
           <tr><td>Base presumida (receita bruta × % presunção)</td><td class="num">${fmtMoney(r.baseCSLL_normal + r.baseCSLL_acrescimo)}</td></tr>
-          ${r.baseCSLL_acrescimo>0 ? `<tr class="high-row"><td>↳ inclui acréscimo de 10% LC 224/25 sobre o excedente</td><td class="num">${fmtMoney(r.baseCSLL_acrescimo)}</td></tr>`:''}
+          ${r.baseCSLL_acrescimo>0 ? `<tr class="high-row"><td>↳ inclui acréscimo de 20% LC 224/25 sobre o excedente</td><td class="num">${fmtMoney(r.baseCSLL_acrescimo)}</td></tr>`:''}
           <tr><td>(+) Outras receitas e ganhos</td><td class="num">${fmtMoney(r.totalOutras)}</td></tr>
           <tr class="total-row"><td><strong>Base de Cálculo da CSLL</strong></td><td class="num">${fmtMoney(r.csllBase)}</td></tr>
           <tr><td>CSLL — 9% sobre a base</td><td class="num">${fmtMoney(r.csllBase * ALIQ_CSLL)}</td></tr>
@@ -1603,16 +1603,16 @@ function renderResultado(r){
       <div class="explanation lc224-active">
         <span class="lc224-tag">⚡ Adicional LC 224/25 — ATIVADO</span>
         <h4><span class="icn">+</span> Inteligência do Cálculo do Adicional LC 224/25</h4>
-        <p>O adicional foi ativado neste trimestre. Conforme art. 4º, § 4º, VII c/c § 5º da <strong>LC 224/25</strong> e arts. 14 e 15 da <strong>IN RFB 2.306/2026</strong>, foi aplicado um acréscimo de <strong>10% sobre os percentuais de presunção</strong> incidentes sobre a parcela da receita bruta que excedeu o limite proporcional trimestral.</p>
+        <p>O adicional foi ativado neste trimestre. Conforme art. 4º, § 4º, VII c/c § 5º da <strong>LC 224/25</strong> e arts. 14 e 15 da <strong>IN RFB 2.306/2026</strong>, foi aplicado um acréscimo de <strong>20% sobre os percentuais de presunção</strong> incidentes sobre a parcela da receita bruta que excedeu o limite proporcional trimestral.</p>
         <ul>
           <li><strong>Limite proporcional trimestral:</strong> R$ 1.250.000,00 (1/4 de R$ 5.000.000,00 anuais — IN 2306, art. 15, § 2º)${r.trimestre>1 && r.folgaAnterior>0 ? ` <em>+ folga acumulada de trimestres anteriores de ${fmtMoney(r.folgaAnterior)} (IN 2306, § 4º)</em>` : ''}.</li>
           <li><strong>Limite efetivamente aplicado neste trimestre:</strong> ${fmtMoney(r.limiteTrimestral)}.</li>
           <li><strong>Receita bruta total do trimestre:</strong> ${fmtMoney(r.receitaBrutaTotal)}.</li>
           <li><strong>Parcela excedente sujeita ao acréscimo:</strong> ${fmtMoney(r.parcelaExcedenteTrim)} (rateada proporcionalmente entre as atividades — § 1º, II).</li>
         </ul>
-        <p><strong>Mecânica aplicada:</strong> para cada atividade, o percentual de presunção foi acrescido em 10%, aplicando-se o percentual majorado <em>somente</em> sobre a parcela excedente, e o percentual original sobre a parcela não excedente.</p>
-        <span class="calc-line">Ex.: presunção IRPJ 32% → percentual majorado = 32% × 1,10 = 35,2%</span>
-        <span class="calc-line">Base IRPJ acrescida = parcela excedente × 35,2% (somada à parcela normal × 32%)</span>
+        <p><strong>Mecânica aplicada:</strong> para cada atividade, o percentual de presunção foi acrescido em 20%, aplicando-se o percentual majorado <em>somente</em> sobre a parcela excedente, e o percentual original sobre a parcela não excedente.</p>
+        <span class="calc-line">Ex.: presunção IRPJ 32% → percentual majorado = 32% × 1,20 = 38,4%</span>
+        <span class="calc-line">Base IRPJ acrescida = parcela excedente × 38,4% (somada à parcela normal × 32%)</span>
         <p><strong>Acréscimo total da base do trimestre — IRPJ:</strong> ${fmtMoney(r.baseIRPJ_acrescimo)} · <strong>CSLL:</strong> ${fmtMoney(r.baseCSLL_acrescimo)}.</p>
         ${r.ajusteQ4 ? renderAjusteQ4(r) : ''}
       </div>
@@ -1623,7 +1623,7 @@ function renderResultado(r){
       <div class="explanation lc224-active">
         <span class="lc224-tag">⚙ Ajuste Anual LC 224/25 — ${r.ajusteQ4.hipotese}</span>
         <h4><span class="icn">Q4</span> Ajuste do Adicional LC 224/25 no encerramento do ano-calendário</h4>
-        <p>No 4º trimestre não houve aplicação do acréscimo de 10% sobre o próprio trimestre, porém o ajuste anual da LC 224/25 foi disparado (IN 2306, art. 15, § 5º).</p>
+        <p>No 4º trimestre não houve aplicação do acréscimo de 20% sobre o próprio trimestre, porém o ajuste anual da LC 224/25 foi disparado (IN 2306, art. 15, § 5º).</p>
         ${renderAjusteQ4(r)}
       </div>
     `;
@@ -1634,7 +1634,7 @@ function renderResultado(r){
         <h4><span class="icn">✓</span> Análise da LC 224/25 neste trimestre</h4>
         <p>O adicional <strong>não foi ativado</strong>, pois a receita bruta total do trimestre (${fmtMoney(r.receitaBrutaTotal)}) <strong>não ultrapassou</strong> o limite proporcional de <strong>${fmtMoney(r.limiteTrimestral)}</strong> (1/4 de R$ 5.000.000,00 anuais${r.trimestre>1 && r.folgaAnterior>0 ? ' acrescido da folga de trimestres anteriores' : ''}).</p>
         ${r.folgaGeradaTrim>0 ? `<p><strong>Folga gerada neste trimestre:</strong> ${fmtMoney(r.folgaGeradaTrim)}. Conforme IN 2306, art. 15, § 4º, essa diferença <em>pode ser considerada</em> para fins de apuração do limite aplicável aos trimestres subsequentes do mesmo ano-calendário.</p>` : ''}
-        <p>Os percentuais de presunção previstos no art. 15 da Lei 9.249/95 foram aplicados em seus valores originais, sem o acréscimo de 10% previsto na LC 224/25.</p>
+        <p>Os percentuais de presunção previstos no art. 15 da Lei 9.249/95 foram aplicados em seus valores originais, sem o acréscimo de 20% previsto na LC 224/25.</p>
       </div>
     `;
   }
@@ -1655,7 +1655,7 @@ function renderAjusteQ4(r){
     </ul>
   `;
   if(a.hipotese === 'I'){
-    h += `<p>Como a receita bruta acumulada do ano foi <strong>inferior</strong> ao limite anual, o acréscimo de 10% não incide no 4º trimestre e os trimestres anteriores que aplicaram o acréscimo foram <strong>recalculados sem o acréscimo</strong>. A diferença foi computada como <strong>crédito a ser deduzido</strong> do IRPJ e da CSLL devidos no 4º trimestre.</p>`;
+    h += `<p>Como a receita bruta acumulada do ano foi <strong>inferior</strong> ao limite anual, o acréscimo de 20% não incide no 4º trimestre e os trimestres anteriores que aplicaram o acréscimo foram <strong>recalculados sem o acréscimo</strong>. A diferença foi computada como <strong>crédito a ser deduzido</strong> do IRPJ e da CSLL devidos no 4º trimestre.</p>`;
   } else if(a.hipotese === 'II'){
     h += `<p>Como o excedente anual (${fmtMoney(a.parcelaExcedAno)}) foi <strong>inferior</strong> ao somatório das parcelas excedentes dos trimestres anteriores (${fmtMoney(a.somatorioExcedAnteriores)}), os trimestres anteriores foram <strong>recalculados proporcionalmente</strong>: para cada trimestre i, novoExced_i = (excedOriginal_i / Σ excedOriginais) × excedAno. A diferença em relação aos valores efetivamente apurados foi reconhecida como <strong>crédito a deduzir</strong>.</p>`;
   } else if(a.hipotese === 'III'){
